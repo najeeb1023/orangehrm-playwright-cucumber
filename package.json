@@ -1,0 +1,17 @@
+{
+  "name": "orangehrm-playwright-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.1.2",
+    "@playwright/test": "^1.33.0",
+    "ts-node": "^10.9.1"
+  }
+}
