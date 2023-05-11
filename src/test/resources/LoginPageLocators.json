@@ -1,6 +1,10 @@
 {
     "name": "Login Page",
     "webElements": [
-        
+        {
+            "elementName": "loginField",
+            "selectorType": "xpath",
+            "selectorValue": "//div[@class='oxd-form-row']//input[@placeholder='username']"
+        }
     ]
 }

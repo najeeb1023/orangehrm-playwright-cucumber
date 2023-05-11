@@ -9,10 +9,10 @@ Feature: User Login Test
 
 
     Scenario Outline: User visits the website and logs in
-        When User goes to the website and enters "<ID>" and "<PASSWORD>"
+        When User goes to the website and enters "<USERNAME>" and "<PASSWORD>"
         Then The user is logged in
 
 
         Examples:
-            |   ID      |   PASSWORD
-            |   Admin   |   admin123
+            |   USERNAME      |   PASSWORD |
+            |   Admin         |   admin123 |
