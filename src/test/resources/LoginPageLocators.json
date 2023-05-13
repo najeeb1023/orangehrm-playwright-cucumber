@@ -3,8 +3,11 @@
     "webElements": [
         {
             "elementName": "loginField",
-            "selectorType": "xpath",
             "selectorValue": "//div[@class='oxd-form-row']//input[@placeholder='username']"
+        },
+        {
+            "elementName": "passwordField",
+            "selectorValue": "//div[@class='oxd-form-row']//input[@placeholder='password']"
         }
     ]
 }

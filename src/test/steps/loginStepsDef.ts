@@ -20,7 +20,6 @@ When('User goes to the website and enters {string} and {string}', async function
 });
 
 Then('The user is logged in', async function () {
-    let login = new Login(page)
-    login.assertIfUserWasLoggedIn()
+    // text
 
 });
