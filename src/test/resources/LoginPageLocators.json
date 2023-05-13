@@ -3,7 +3,7 @@
     "webElements": [
         {
             "elementName": "loginField",
-            "selectorValue": "//div[@class='oxd-form-row']//input[@placeholder='username']"
+            "selectorValue": "//div[contains(@class,'oxd-form-row')]//input[contains(@name,'username')]"
         },
         {
             "elementName": "passwordField",

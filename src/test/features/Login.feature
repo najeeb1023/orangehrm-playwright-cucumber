@@ -1,10 +1,8 @@
-@runOnly
-
 Feature: User Login Test
 
     Background: Below given step is to login to Orange HRM
 
-        Given the user lands at the webpage and logs in
+        Given the user lands at the webpage
 
 
 

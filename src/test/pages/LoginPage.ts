@@ -7,18 +7,8 @@ import * as loginPageResources from "../resources/LoginPageLocators.json"
  }
 export class Login {
 
-    public LoginButton: PageElement
-
-
-    
-
-
-
-    
     loginPageLocators = {
         loginField:() => this.page.locator(getResource('loginField').selectorValue),
-        usernameField:() => this.page.locator("//input[contains(@name,'username')]"),
-        passwordField:() => this.page.locator("//input[contains(@name,'password'])"),
         loginBtn:() => this.page.locator("//button[@type='submit']")
     }
 
@@ -31,8 +21,9 @@ export class Login {
 
     }
 
-    public async loginUser(username: string, password: string):Promise<void> {
-       this.loginPageLocators.loginField().click()
+    public async loginUser(username: string):Promise<void> {
+       this.loginPageLocators.loginField().type(username)
+       
        
         
         
