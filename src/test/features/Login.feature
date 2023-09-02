@@ -13,4 +13,5 @@ Feature: User Login Test
 
         Examples:
             |   USERNAME      |   PASSWORD |
+            |   Admin         |   22dmin123 |
             |   Admin         |   admin123 |
