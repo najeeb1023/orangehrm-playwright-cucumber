@@ -9,7 +9,7 @@ let page: Page;
 
 
 Given('the user lands at the webpage', async function () {
-  browser = await chromium.launch({headless: true});
+  browser = await chromium.launch({headless: false});
   page = await browser.newPage();
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   });
@@ -17,9 +17,11 @@ Given('the user lands at the webpage', async function () {
 When('User goes to the website and enters {string} and {string}', async function (username: string, password: string) {
   let loginUserFunc = new Login(page)
   loginUserFunc.loginUser(username, password)
+
 });
 
-Then('The user is logged in', async function () {
-    // text
+Then('The user is logged in',{timeout: 6000}, async function () {
+   let loginUserFunc = new Login(page)
+   loginUserFunc.assertUserLogin()
 
 });
