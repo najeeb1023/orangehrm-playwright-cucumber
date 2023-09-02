@@ -9,7 +9,7 @@ let page: Page;
 
 
 Given('the user lands at the webpage', async function () {
-  browser = await chromium.launch({headless: false});
+  browser = await chromium.launch({headless: true});
   page = await browser.newPage();
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   });
