@@ -10,7 +10,8 @@ export class Login {
     loginPageLocators = {
         loginField:() => this.page.locator(getResource('loginField').selectorValue),
         passwordField:() => this.page.locator(getResource('passwordField').selectorValue),
-        loginBtn:() => this.page.locator("//button[@type='submit']")
+        loginBtn:() => this.page.locator("//button[@type='submit']"),
+        getBody:() => this.page.locator('//body')
     }
 
     
@@ -29,9 +30,15 @@ export class Login {
        
        
        
+       
         
         
         
+    }
+
+    public async assertUserLogin():Promise<void> {
+        
+        await expect(this.loginPageLocators.getBody().getByText('Time at Work')).toBeAttached()
     }
 
 
