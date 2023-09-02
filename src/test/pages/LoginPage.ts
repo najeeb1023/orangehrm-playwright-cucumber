@@ -11,7 +11,7 @@ export class Login {
         loginField:() => this.page.locator(getResource('loginField').selectorValue),
         passwordField:() => this.page.locator(getResource('passwordField').selectorValue),
         loginBtn:() => this.page.locator("//button[@type='submit']"),
-        getBody:() => this.page.locator('//body')
+        getBody:() => this.page.locator("//li[@class='oxd-userdropdown']")
     }
 
     
@@ -38,7 +38,9 @@ export class Login {
 
     public async assertUserLogin():Promise<void> {
         
-        await expect(this.loginPageLocators.getBody().getByText('Time at Work')).toBeAttached()
+        
+        await expect(this.loginPageLocators.getBody()).toBeAttached()
+        
     }
 
 
