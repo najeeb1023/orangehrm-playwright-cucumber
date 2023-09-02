@@ -7,7 +7,7 @@
         },
         {
             "elementName": "passwordField",
-            "selectorValue": "//div[@class='oxd-form-row']//input[@placeholder='password']"
+            "selectorValue": "//div[contains(@class,'oxd-form-row')]//input[contains(@name,'password')]"
         }
     ]
 }

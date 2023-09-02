@@ -9,6 +9,7 @@ export class Login {
 
     loginPageLocators = {
         loginField:() => this.page.locator(getResource('loginField').selectorValue),
+        passwordField:() => this.page.locator(getResource('passwordField').selectorValue),
         loginBtn:() => this.page.locator("//button[@type='submit']")
     }
 
@@ -21,8 +22,11 @@ export class Login {
 
     }
 
-    public async loginUser(username: string):Promise<void> {
-       this.loginPageLocators.loginField().type(username)
+    public async loginUser(username: string, password: string):Promise<void> {
+       await this.loginPageLocators.loginField().type(username)
+       await this.loginPageLocators.passwordField().type(password)
+       await this.loginPageLocators.loginBtn().click()
+       
        
        
         

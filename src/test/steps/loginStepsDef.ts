@@ -16,7 +16,7 @@ Given('the user lands at the webpage', async function () {
 
 When('User goes to the website and enters {string} and {string}', async function (username: string, password: string) {
   let loginUserFunc = new Login(page)
-  loginUserFunc.loginUser(username)
+  loginUserFunc.loginUser(username, password)
 });
 
 Then('The user is logged in', async function () {
