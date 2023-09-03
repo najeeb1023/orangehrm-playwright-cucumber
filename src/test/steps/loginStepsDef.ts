@@ -1,6 +1,7 @@
 import { Given, Then, When } from "@cucumber/cucumber"
 import {chromium, Page, Browser} from "@playwright/test"
 import { Login } from "../pages/LoginPage";
+import { AdminPage } from "../pages/AdminPage";
 
 let browser: Browser;
 let page: Page;
@@ -23,5 +24,7 @@ When('User goes to the website and enters {string} and {string}', async function
 Then('The user is logged in',{timeout: 6000}, async function () {
    let loginUserFunc = new Login(page)
    loginUserFunc.assertUserLogin()
+   
+  
 
 });

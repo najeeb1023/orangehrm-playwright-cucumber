@@ -14,13 +14,8 @@ export class Login {
         getBody:() => this.page.locator("//li[@class='oxd-userdropdown']")
     }
 
-    
-    
-
     constructor(public page: Page){
         this.page = page;
-
-
     }
 
     public async loginUser(username: string, password: string):Promise<void> {
@@ -28,17 +23,9 @@ export class Login {
        await this.loginPageLocators.passwordField().type(password)
        await this.loginPageLocators.loginBtn().click()
        
-       
-       
-       
-        
-        
-        
     }
 
     public async assertUserLogin():Promise<void> {
-        
-        
         await expect(this.loginPageLocators.getBody()).toBeAttached()
         
     }

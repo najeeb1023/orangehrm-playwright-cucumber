@@ -1,0 +1,17 @@
+{
+    "name": "Admin Page",
+    "webElements": [
+        {
+            "elementName": "adminTab",
+            "selectorValue": "//div[@class='oxd-sidepanel-body']//li[1]"
+        },
+        {
+            "elementName": "addBtn",
+            "selectorValue": "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']"
+        },
+        {
+            "elementName": "pimTab",
+            "selectorValue": "//div[@class='oxd-sidepanel-body']//li[2]"
+        }
+    ]
+}
