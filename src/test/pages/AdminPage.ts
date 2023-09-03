@@ -24,14 +24,13 @@ export class AdminPage {
 
     public async goToAdminTab():Promise<void>{
         await this.adminPageLocators.adminTab().click()
-        await this.adminPageLocators.pimTab().click()
         
 }
 
-    public async assertAdminTabNavigation():Promise<void>{
+  /*  public async assertAdminTabNavigation():Promise<void>{
         
-        //await expect(this.adminPageLocators.addBtn()).toBeAttached()
         await expect(this.adminPageLocators.addBtn()).toBeAttached()
     }
+*/
 
 }

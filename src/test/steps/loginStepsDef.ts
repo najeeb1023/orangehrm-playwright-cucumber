@@ -17,14 +17,12 @@ Given('the user lands at the webpage', async function () {
 
 When('User goes to the website and enters {string} and {string}', async function (username: string, password: string) {
   let loginUserFunc = new Login(page)
-  loginUserFunc.loginUser(username, password)
+  await loginUserFunc.loginUser(username, password)
 
 });
 
-Then('The user is logged in',{timeout: 6000}, async function () {
-   let loginUserFunc = new Login(page)
-   loginUserFunc.assertUserLogin()
-   
-  
-
+Then('The user is logged in', async function () {
+  let loginUserFunc = new Login(page)
+   await loginUserFunc.assertUserLogin()
+   console.log('1st Scenario Running Successfully!')
 });
