@@ -1,16 +1,15 @@
 import { Given, Then, When } from "@cucumber/cucumber"
 import { AdminPage } from "../pages/AdminPage"
 import { Browser, Page, chromium } from "@playwright/test";
+import { pageFixture } from "../hooks/pageFixture";
 
-let page : Page;
-let browser: Browser;
 
 
 Given('User is at the Landing Page', () => async function (){
 
   
     console.log('2nd scenario Given running!!!!')
-    let adminPage = new AdminPage(page)
+    let adminPage = new AdminPage(pageFixture.page)
     await adminPage.goToAdminTab()
     
     
