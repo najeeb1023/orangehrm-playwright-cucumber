@@ -20,7 +20,7 @@ After(async function (){
 
 
     await pageFixture.page.waitForTimeout(3000);
-    await this.attach(img, "img/png");
+    // await this.attach(img, "img/png");
     await pageFixture.page.close();
     await context.close();
 })
