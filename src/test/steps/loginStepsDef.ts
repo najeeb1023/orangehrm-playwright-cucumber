@@ -17,5 +17,4 @@ When('User goes to the website and enters {string} and {string}', async function
 Then('The user is logged in', async function () {
   let loginUserFunc = new Login(pageFixture.page)
    await loginUserFunc.assertUserLogin()
-   console.log('1st Scenario Running Successfully!')
 });
