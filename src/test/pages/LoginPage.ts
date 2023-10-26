@@ -11,7 +11,7 @@ export class Login {
         loginField:() => this.page.locator(getResource('loginField').selectorValue),
         passwordField:() => this.page.locator(getResource('passwordField').selectorValue),
         loginBtn:() => this.page.locator("//button[@type='submit']"),
-        getBody:() => this.page.locator("//li[@class='oxd-userdropdown']")
+        getBody:() => this.page.locator("//li[@class='oxd-userdropdown']"),
     }
 
     constructor(public page: Page){

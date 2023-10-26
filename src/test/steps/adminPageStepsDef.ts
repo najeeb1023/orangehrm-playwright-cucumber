@@ -7,7 +7,7 @@ import { pageFixture } from "../hooks/pageFixture";
 
 Given('User is at the Landing Page', () => async function (){
 
-  
+    
     console.log('2nd scenario Given running!!!!')
     let adminPage = new AdminPage(pageFixture.page)
     await adminPage.goToAdminTab()

@@ -6,21 +6,23 @@ let browser: Browser;
 let context: BrowserContext;
 
 BeforeAll(async function (){
-    browser = await chromium.launch({headless: false, slowMo: 1000});
+    browser = await chromium.launch({headless: true, slowMo: 1000});
+    
 })
 
 Before(async function(){
     context = await browser.newContext();
-    const page = await browser.newPage();
+    const page = await context.newPage();
     pageFixture.page = page;
 })
 
 After(async function (){
-    const img = await pageFixture.page.screenshot({path: ".test-result/screenshots/", type: "png"})
+    const img = await pageFixture.page.screenshot({path: ".test-result/screenshots/", type: "jpeg"})
 
-    await pageFixture.page.waitForTimeout(3000)
+    await pageFixture.page.waitForTimeout(3000);
+    await this.attach(img, "img/png");
     await pageFixture.page.close();
-    await browser.close();
+    await context.close();
 })
 
 AfterAll(async function (){
