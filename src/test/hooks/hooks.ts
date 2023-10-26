@@ -17,7 +17,7 @@ Before(async function(){
 })
 
 After(async function (){
-    const img = await pageFixture.page.screenshot({path: ".test-result/screenshots/", type: "jpeg"})
+
 
     await pageFixture.page.waitForTimeout(3000);
     await this.attach(img, "img/png");
