@@ -1,6 +1,7 @@
 import { Page, expect } from "@playwright/test";
 import { PageElement } from "../resources/interfaces/iPageElement";
 import * as loginPageResources from "../resources/LoginPageLocators.json"
+import { pageFixture } from "../hooks/pageFixture";
 
  function getResource(resourceName: string) {
     return loginPageResources.webElements.find((element: PageElement) => element.elementName == resourceName) as PageElement
@@ -8,11 +9,11 @@ import * as loginPageResources from "../resources/LoginPageLocators.json"
 export class Login {
 
     loginPageLocators = {
-        loginField:() => this.page.locator(getResource('loginField').selectorValue),
-        passwordField:() => this.page.locator(getResource('passwordField').selectorValue),
-        loginBtn:() => this.page.locator("//button[@type='submit']"),
-        getBody:() => this.page.locator("//li[@class='oxd-userdropdown']"),
-        adminTab:() => this.page.locator(getResource('adminTab').selectorValue)
+        loginField:() => pageFixture.page.locator(getResource('loginField').selectorValue),
+        passwordField:() => pageFixture.page.locator(getResource('passwordField').selectorValue),
+        loginBtn:() => pageFixture.page.locator("//button[@type='submit']"),
+        getBody:() => pageFixture.page.locator("//li[@class='oxd-userdropdown']"),
+        adminTab:() => pageFixture.page.locator(getResource('adminTab').selectorValue)
     }
 
     constructor(public page: Page){
