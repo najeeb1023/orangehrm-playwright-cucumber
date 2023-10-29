@@ -1,4 +1,3 @@
-@Login
 Feature: User Login Test
 
     Background: Below given step is to login to Orange HRM

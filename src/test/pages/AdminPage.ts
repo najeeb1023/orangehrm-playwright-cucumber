@@ -25,20 +25,9 @@ export class AdminPage {
     
 
     public async goToAdminTab():Promise<void>{
+    
+        await this.adminPageLocators.buzzTab().click()
         
-
-        let buzz = this.adminPageLocators.buzzTab()
-        await pageFixture.page.reload()
-        await buzz.click()
-
-        //await pageFixture.page.waitForTimeout(6000)
-        //await this.adminPageLocators.buzzTab().click()
-
-        /*
-        console.log('Works till here goToAdmin')
-        await pageFixture.page.waitForTimeout(5000);
-        await this.adminPageLocators.adminTab().click()
-        */
         
         
 }
