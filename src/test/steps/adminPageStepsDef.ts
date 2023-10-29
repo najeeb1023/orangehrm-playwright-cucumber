@@ -11,9 +11,7 @@ Given('User is already at the website', async function (){
 
     
     console.log('Given Successful')
-    await pageFixture.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     //await new Promise(f => setTimeout(f, 1000));
-    await pageFixture.page.waitForTimeout(6000)
     let loginUserFunc = new AdminPage(pageFixture.page)
     loginUserFunc.goToAdminTab()
     
@@ -22,7 +20,7 @@ Given('User is already at the website', async function (){
 
 When('User clicks on Admin Tab', async function (){
 
-    console.log('When running 2nd scenario')
+    console.log('Tests running successfully.')
 
     
 
@@ -30,6 +28,6 @@ When('User clicks on Admin Tab', async function (){
 
 Then('User is redirected to Admin Tab', async function (){
     
-   console.log('Then running 2nd scenario')
+   console.log('Tests finished.')
     
 })

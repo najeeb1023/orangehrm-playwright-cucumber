@@ -5,7 +5,8 @@ import { AdminPage } from "../pages/AdminPage";
 import { pageFixture } from "../hooks/pageFixture";
 
 Given('the user lands at the webpage', async function () {
-  await pageFixture.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+  
+  
   });
 
 When('User goes to the website and enters {string} and {string}', async function (username: string, password: string) {

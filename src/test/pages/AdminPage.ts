@@ -10,9 +10,9 @@ function getResource(resourceName: string) {
 export class AdminPage {
 
     adminPageLocators = {
-        adminTab:() => this.page.locator(getResource('adminTab').selectorValue),
-        addBtn:() => this.page.locator(getResource('addBtn').selectorValue),
-        pimTab:() => this.page.locator(getResource('pimTab').selectorValue),
+        adminTab:() => pageFixture.page.locator(getResource('adminTab').selectorValue),
+        addBtn:() => pageFixture.page.locator(getResource('addBtn').selectorValue),
+        pimTab:() => pageFixture.page.locator(getResource('pimTab').selectorValue),
         buzzTab:() => pageFixture.page.locator(getResource('buzzTab').selectorValue)
     }
 
@@ -26,7 +26,7 @@ export class AdminPage {
 
     public async goToAdminTab():Promise<void>{
     
-        await this.adminPageLocators.buzzTab().click()
+        await this.adminPageLocators.adminTab().click()
         
         
         

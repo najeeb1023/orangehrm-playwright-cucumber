@@ -1,3 +1,4 @@
+@Admin
 Feature: User navigates to Admin Tab
 
     Background: Below given step is to access Admin Page
