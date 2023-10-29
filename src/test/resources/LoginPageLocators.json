@@ -8,6 +8,10 @@
         {
             "elementName": "passwordField",
             "selectorValue": "//div[contains(@class,'oxd-form-row')]//input[contains(@name,'password')]"
+        },
+        {
+            "elementName": "adminTab",
+            "selectorValue": "//div[@class='oxd-sidepanel-body']//li[1]"
         }
     ]
 }

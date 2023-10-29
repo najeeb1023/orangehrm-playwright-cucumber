@@ -12,6 +12,7 @@ export class Login {
         passwordField:() => this.page.locator(getResource('passwordField').selectorValue),
         loginBtn:() => this.page.locator("//button[@type='submit']"),
         getBody:() => this.page.locator("//li[@class='oxd-userdropdown']"),
+        adminTab:() => this.page.locator(getResource('adminTab').selectorValue)
     }
 
     constructor(public page: Page){
@@ -29,6 +30,7 @@ export class Login {
         await expect(this.loginPageLocators.getBody()).toBeAttached()
         
     }
+
 
 
 }
