@@ -2,11 +2,13 @@ import { After, AfterAll, Before, BeforeAll, BeforeStep, AfterStep } from "@cucu
 import { Browser, chromium, Page, BrowserContext } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
 
+
 let browser: Browser;
 let context: BrowserContext;
 
 BeforeAll(async function (){
     browser = await chromium.launch({headless: true, slowMo: 1000});
+    
     
 })
 

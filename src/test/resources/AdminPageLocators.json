@@ -12,6 +12,10 @@
         {
             "elementName": "pimTab",
             "selectorValue": "//div[@class='oxd-sidepanel-body']//li[2]"
+        },
+        {
+            "elementName": "buzzTab",
+            "selectorValue": "//div[@class='oxd-sidepanel-body']//li[12]"
         }
     ]
 }
