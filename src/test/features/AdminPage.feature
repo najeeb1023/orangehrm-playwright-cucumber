@@ -1,9 +1,8 @@
-@AdminPage
 Feature: User navigates to Admin Tab
 
     Background: Below given step is to access Admin Page
 
-        Given User is at the Landing Page
+        Given User is already at the website
 
 
 

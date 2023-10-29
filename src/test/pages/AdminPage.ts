@@ -12,7 +12,8 @@ export class AdminPage {
     adminPageLocators = {
         adminTab:() => this.page.locator(getResource('adminTab').selectorValue),
         addBtn:() => this.page.locator(getResource('addBtn').selectorValue),
-        pimTab:() => this.page.locator(getResource('pimTab').selectorValue)
+        pimTab:() => this.page.locator(getResource('pimTab').selectorValue),
+        buzzTab:() => pageFixture.page.locator(getResource('buzzTab').selectorValue)
     }
 
 
@@ -25,10 +26,19 @@ export class AdminPage {
 
     public async goToAdminTab():Promise<void>{
         
+
+        let buzz = this.adminPageLocators.buzzTab()
+        await pageFixture.page.reload()
+        await buzz.click()
+
+        //await pageFixture.page.waitForTimeout(6000)
+        //await this.adminPageLocators.buzzTab().click()
+
+        /*
         console.log('Works till here goToAdmin')
-        await pageFixture.page.goto('www.facebook.com')
+        await pageFixture.page.waitForTimeout(5000);
         await this.adminPageLocators.adminTab().click()
-        await pageFixture.page.waitForTimeout(3000);
+        */
         
         
 }
