@@ -17,7 +17,7 @@ export class Login {
     }
 
     constructor(public page: Page){
-        this.page = page;
+        pageFixture.page = page;
     }
 
     public async loginUser(username: string, password: string):Promise<void> {

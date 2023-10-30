@@ -1,13 +1,14 @@
 import { After, AfterAll, Before, BeforeAll, BeforeStep, AfterStep } from "@cucumber/cucumber";
 import { Browser, chromium, Page, BrowserContext } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
+import { config } from "../../../playwright.config";
 
 
 let browser: Browser;
 let context: BrowserContext;
 
 BeforeAll(async function (){
-    browser = await chromium.launch({headless: true, slowMo: 500});
+    browser = await chromium.launch(config);
     context = await browser.newContext();
     const page = await context.newPage();
     pageFixture.page = page;
