@@ -23,7 +23,7 @@ export class Login {
     public async loginUser(username: string, password: string):Promise<void> {
        await this.loginPageLocators.loginField().type(username)
        await this.loginPageLocators.passwordField().type(password)
-       await this.loginPageLocators.loginBtn().click()
+       this.loginPageLocators.loginBtn().click()
        
     }
 

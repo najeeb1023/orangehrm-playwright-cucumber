@@ -7,7 +7,7 @@ let browser: Browser;
 let context: BrowserContext;
 
 BeforeAll(async function (){
-    browser = await chromium.launch({headless: true, slowMo: 1000});
+    browser = await chromium.launch({headless: false, slowMo: 500});
     context = await browser.newContext();
     const page = await context.newPage();
     pageFixture.page = page;

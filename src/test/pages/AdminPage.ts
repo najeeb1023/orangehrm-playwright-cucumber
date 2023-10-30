@@ -27,20 +27,17 @@ export class AdminPage {
 
     public async goToAdminTab():Promise<void>{
     
-        await this.adminPageLocators.adminTab().click()
+        this.adminPageLocators.adminTab().click()
                
     }
 
-    public async enterUserDetails():Promise<void>{
+    public async enterUserDetails(usertext: string):Promise<void>{
         
-        await this.adminPageLocators.userField().type('Najeeb')
+        this.adminPageLocators.userField().type(usertext)
+        //await this.adminPageLocators.userField().
 
     }
 
-  /*  public async assertAdminTabNavigation():Promise<void>{
-        
-        await expect(this.adminPageLocators.addBtn()).toBeAttached()
-    }
-*/
+
 
 }
