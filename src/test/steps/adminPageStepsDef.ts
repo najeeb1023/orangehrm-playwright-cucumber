@@ -28,6 +28,8 @@ When('User clicks on Admin Tab', async function (){
 
 Then('User is redirected to Admin Tab', async function (){
     
-   console.log('Tests finished.')
+    console.log('Test ends')
+   let userDetails = new AdminPage(pageFixture.page)
+   userDetails.enterUserDetails()
     
 })
