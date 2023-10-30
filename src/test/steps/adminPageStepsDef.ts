@@ -7,29 +7,28 @@ import { Login } from "../pages/LoginPage";
 
 
 
-Given('User is already at the website', async function (){
+Given('User is already at the website.', async function (){
 
     
-    console.log('Given Successful')
-    //await new Promise(f => setTimeout(f, 1000));
+    
     let loginUserFunc = new AdminPage(pageFixture.page)
-    loginUserFunc.goToAdminTab()
+    await loginUserFunc.goToAdminTab()
     
     
 })
 
-When('User clicks on Admin Tab', async function (){
+When('User clicks on Admin Tab.', async function (){
 
-    console.log('Tests running successfully.')
-
-    
-
-})
-
-Then('User is redirected to Admin Tab', async function (){
-    
     console.log('Test ends')
-   let userDetails = new AdminPage(pageFixture.page)
-   userDetails.enterUserDetails()
+    
+    
+
+})
+
+Then('User is able to enter {string}.', async function (usertext: string){
+    
+    let userDetails = new AdminPage(pageFixture.page)
+    await userDetails.enterUserDetails(usertext)
+
     
 })
