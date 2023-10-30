@@ -7,7 +7,7 @@ let browser: Browser;
 let context: BrowserContext;
 
 BeforeAll(async function (){
-    browser = await chromium.launch({headless: true, slowMo: 1000});
+    browser = await chromium.launch({headless: false, slowMo: 1000});
     context = await browser.newContext();
     const page = await context.newPage();
     pageFixture.page = page;
@@ -30,10 +30,9 @@ After(async function (){
 })
 
 AfterAll(async function (){
-    await pageFixture.page.waitForTimeout(3000);
     // await this.attach(img, "img/png");
+    await pageFixture.page.waitForTimeout(3000);
     await pageFixture.page.close();
     await context.close();
-    
     await browser.close();
 })

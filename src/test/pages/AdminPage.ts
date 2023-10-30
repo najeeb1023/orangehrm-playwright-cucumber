@@ -13,7 +13,8 @@ export class AdminPage {
         adminTab:() => pageFixture.page.locator(getResource('adminTab').selectorValue),
         addBtn:() => pageFixture.page.locator(getResource('addBtn').selectorValue),
         pimTab:() => pageFixture.page.locator(getResource('pimTab').selectorValue),
-        buzzTab:() => pageFixture.page.locator(getResource('buzzTab').selectorValue)
+        buzzTab:() => pageFixture.page.locator(getResource('buzzTab').selectorValue),
+        userField:() => pageFixture.page.locator(getResource('userField').selectorValue)
     }
 
 
@@ -27,10 +28,14 @@ export class AdminPage {
     public async goToAdminTab():Promise<void>{
     
         await this.adminPageLocators.adminTab().click()
+               
+    }
+
+    public async enterUserDetails():Promise<void>{
         
-        
-        
-}
+        await this.adminPageLocators.userField().type('Najeeb')
+
+    }
 
   /*  public async assertAdminTabNavigation():Promise<void>{
         

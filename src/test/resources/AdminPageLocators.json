@@ -16,6 +16,10 @@
         {
             "elementName": "buzzTab",
             "selectorValue": "//div[@class='oxd-sidepanel-body']//li[12]"
+        },
+        {
+            "elementName": "userField",
+            "selectorValue": "//div[@class='oxd-grid-item oxd-grid-item--gutters']//input[@class='oxd-input oxd-input--active']"
         }
     ]
 }
