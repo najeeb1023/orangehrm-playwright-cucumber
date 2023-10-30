@@ -14,12 +14,13 @@ export class AdminPage {
         addBtn:() => pageFixture.page.locator(getResource('addBtn').selectorValue),
         pimTab:() => pageFixture.page.locator(getResource('pimTab').selectorValue),
         buzzTab:() => pageFixture.page.locator(getResource('buzzTab').selectorValue),
-        userField:() => pageFixture.page.locator(getResource('userField').selectorValue)
+        userField:() => pageFixture.page.locator(getResource('userField').selectorValue),
+        roleDropDown:() => pageFixture.page.locator(getResource('roleDropDown').selectorValue)
     }
 
 
     constructor(public page: Page){
-        this.page = page;
+        pageFixture.page = page;
     }
 
 
@@ -31,10 +32,15 @@ export class AdminPage {
                
     }
 
-    public async enterUserDetails(usertext: string):Promise<void>{
+    public async enterUserDetails():Promise<void>{
         
-        this.adminPageLocators.userField().type(usertext)
-        //await this.adminPageLocators.userField().
+        
+        const el = this.adminPageLocators.roleDropDown().first()
+        el.click()
+        el.getByText('Admin').click()
+        //expect(el).toContain('Admin')
+        
+        
 
     }
 

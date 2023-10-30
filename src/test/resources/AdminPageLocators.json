@@ -20,6 +20,10 @@
         {
             "elementName": "userField",
             "selectorValue": "//div[@class='oxd-grid-item oxd-grid-item--gutters']//input[@class='oxd-input oxd-input--active']"
+        },
+        {
+            "elementName": "roleDropDown",
+            "selectorValue": "//div[@class='oxd-select-wrapper']"
         }
     ]
 }

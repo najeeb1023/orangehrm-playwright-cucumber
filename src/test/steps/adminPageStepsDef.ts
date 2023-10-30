@@ -1,4 +1,4 @@
-import { Given, Then, When } from "@cucumber/cucumber"
+import { Given, Then, When, setDefaultTimeout } from "@cucumber/cucumber"
 import { AdminPage } from "../pages/AdminPage"
 import { Browser, Page, chromium, expect } from "@playwright/test";
 import { pageFixture } from "../hooks/pageFixture";
@@ -7,7 +7,7 @@ import { Login } from "../pages/LoginPage";
 
 
 
-Given('User is already at the website.', async function (){
+Given('User is already at the website.', async ()=>{
 
     
     
@@ -17,18 +17,18 @@ Given('User is already at the website.', async function (){
     
 })
 
-When('User clicks on Admin Tab.', async function (){
+When('User clicks on Admin Tab.', async ()=>{
 
-    console.log('Test ends')
+   
     
     
 
 })
 
-Then('User is able to enter {string}.', async function (usertext: string){
+Then('User is able to select role.', async ()=>{
     
     let userDetails = new AdminPage(pageFixture.page)
-    await userDetails.enterUserDetails(usertext)
+    await userDetails.enterUserDetails()
 
     
 })

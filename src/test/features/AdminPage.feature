@@ -9,8 +9,4 @@ Feature: User navigates to Admin Tab
 
     Scenario Outline: User visits the website and logs in.
         When User clicks on Admin Tab.
-        Then User is able to enter "<USERTEXT>".
-
-    Examples:
-            |   USERTEXT      |
-            |   Najeeb        |
+        Then User is able to select role.
