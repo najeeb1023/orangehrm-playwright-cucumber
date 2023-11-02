@@ -21,14 +21,14 @@ export class Login {
     }
 
     public async loginUser(username: string, password: string):Promise<void> {
-       await this.loginPageLocators.loginField().type(username)
-       await this.loginPageLocators.passwordField().type(password)
-       this.loginPageLocators.loginBtn().click()
+       await this.loginPageLocators.loginField().type(username);
+       await this.loginPageLocators.passwordField().type(password);
+       await this.loginPageLocators.loginBtn().click();
        
     }
 
     public async assertUserLogin():Promise<void> {
-        await expect(this.loginPageLocators.getBody()).toBeAttached()
+        await expect(this.loginPageLocators.getBody()).toBeAttached();
         
     }
 

@@ -15,7 +15,8 @@ export class AdminPage {
         pimTab:() => pageFixture.page.locator(getResource('pimTab').selectorValue),
         buzzTab:() => pageFixture.page.locator(getResource('buzzTab').selectorValue),
         userField:() => pageFixture.page.locator(getResource('userField').selectorValue),
-        roleDropDown:() => pageFixture.page.locator(getResource('roleDropDown').selectorValue)
+        roleDropDown:() => pageFixture.page.locator(getResource('roleDropDown').selectorValue),
+        searchBtnAdmin:() => pageFixture.page.locator(getResource('searchBtnAdmin').selectorValue)
     }
 
 
@@ -28,20 +29,28 @@ export class AdminPage {
 
     public async goToAdminTab():Promise<void>{
     
-        this.adminPageLocators.adminTab().click()
+        await this.adminPageLocators.adminTab().click();
                
     }
 
     public async enterUserDetails():Promise<void>{
         
         
-        const el = this.adminPageLocators.roleDropDown().first()
-        el.click()
-        el.getByText('Admin').click()
-        //expect(el).toContain('Admin')
-        
-        
+        const el = this.adminPageLocators.roleDropDown().first();
+        await el.click();
+        await el.getByText('Admin').click()
 
+        
+        
+    }
+
+    public async searchAdminUsers():Promise<void>{
+
+        const searchEl = this.adminPageLocators.searchBtnAdmin();
+        await searchEl.click();
+    
+        
+        
     }
 
 

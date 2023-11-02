@@ -24,6 +24,10 @@
         {
             "elementName": "roleDropDown",
             "selectorValue": "//div[@class='oxd-select-wrapper']"
+        },
+        {
+            "elementName": "searchBtnAdmin",
+            "selectorValue": "//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']"
         }
     ]
 }
