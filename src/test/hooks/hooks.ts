@@ -1,4 +1,4 @@
-import { After, AfterAll, Before, BeforeAll, BeforeStep, AfterStep } from "@cucumber/cucumber";
+import { After, AfterAll, Before, BeforeAll, BeforeStep, AfterStep, Status } from "@cucumber/cucumber";
 import { Browser, chromium, Page, BrowserContext } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
 import { config } from "../../../playwright.config";
@@ -9,31 +9,21 @@ let context: BrowserContext;
 
 BeforeAll(async function (){
     browser = await chromium.launch(config);
-    context = await browser.newContext();
-    const page = await context.newPage();
-    pageFixture.page = page;
-
-    
-    
-    
-    
 })
 
 Before(async function(){
-    await pageFixture.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-   
+    context = await browser.newContext({recordVideo: { dir: 'videos/'}});
+    const page = await context.newPage();
+    pageFixture.page = page;
 })
 
-After(async function (){
-
-
-    
+After(async function ({ pickle, result }){
+    console.log(result?.status);
+    if(result?.status == Status.PASSED){
+        const img = await pageFixture.page.screenshot({ path: `./test-result/screenshots/${pickle.name}.png`,type:"png"});
+        await this.attach(img, "image/png")
+    }
 })
-
 AfterAll(async function (){
-    // await this.attach(img, "img/png");
-    await pageFixture.page.waitForTimeout(3000);
-    await pageFixture.page.close();
-    await context.close();
     await browser.close();
 })

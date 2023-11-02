@@ -1,14 +1,11 @@
-@Cucumber.Options(features={"Login.feature","AdminPage.feature"})
 @Login
 Feature: User Login Test
 
-    Background: Below given step is to login to Orange HRM
-
+    Background: User logs in.
         Given the user lands at the webpage.
-
-
-
-    Scenario Outline: User visits the website and logs in.
+        
+   
+    Scenario: User visits the website and logs in.
         When User goes to the website and enters "<USERNAME>" and "<PASSWORD>".
         Then The user is logged in.
 

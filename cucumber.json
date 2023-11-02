@@ -2,7 +2,7 @@
     "default": {
         "compilerOptions": {
             "esModuleInterop": true,
-            "resolveJsonModule": true
+            "resolveJsonModule": false
         },
         "formatOptions": {
             "snippetInterface": "async-await"
