@@ -35,15 +35,19 @@
          },
          {
              "elementName": "tableCard",
-             "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-card']"
+             "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-card']//div[@class='oxd-table-cell oxd-padding-cell'][3]"
          },
+         {
+            "elementName": "tableCardComplete",
+            "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-card']"
+        },
          {
             "elementName": "tableColumn",
             "selectorValue": "//div[@class='oxd-table-header-cell oxd-padding-cell oxd-table-th'][3]"
          },
          {
             "elementName": "userAdminAssert",
-            "selectorValue": "//div[@class='oxd-table-cell oxd-padding-cell'][3]"
+            "selectorValue": "//div[@class='oxd-table-cell oxd-padding-cell']"
          }
     ]
 }

@@ -20,7 +20,8 @@ export class AdminPage {
         sysAdminTable:() => pageFixture.page.locator(getResource('systemUserTable').selectorValue),
         tableCardData:() => pageFixture.page.locator(getResource('tableCard').selectorValue),
         tableColumn:() => pageFixture.page.locator(getResource('tableColumn').selectorValue),
-        userAdminAssert:() => pageFixture.page.locator(getResource('userAdminAssert').selectorValue)
+        userAdminAssert:() => pageFixture.page.locator(getResource('userAdminAssert').selectorValue),
+        tableCardComplete:() => pageFixture.page.locator(getResource('tableCardComplete').selectorValue)
         
     }
 
@@ -46,23 +47,51 @@ export class AdminPage {
         await expect(this.adminPageLocators.roleDropDown()).toBeVisible()
         await el.getByText('Admin').click();
         await this.adminPageLocators.searchBtnAdmin().click()
-        
-
-        
-        
+    
     }
 
-    public async getAdmins(numberOfCheckboxes: number):Promise<any>{
+    public async enterUserDetailsEss():Promise<void>{
+        
+        
+        const el = this.adminPageLocators.roleDropDown().first();
+        await el.click();
+        await expect(this.adminPageLocators.roleDropDown()).toBeVisible()
+        await el.getByText('ESS').click();
+        await this.adminPageLocators.searchBtnAdmin().click()
+    
+    }
+
+    public async getAdmins():Promise<any>{
+        let numberOfCards = await this.adminPageLocators.tableCardComplete().count()
+        for(let j=0;j<=numberOfCards;j++){
+            console.log(numberOfCards)
+        }
+        let numberOfCheckboxes: number
         for(let i=1;i<=numberOfCheckboxes;i++){
 
             const column = this.adminPageLocators.tableColumn();
-            console.log('Number of columns', await column.allInnerTexts())
+            console.log('Number of columns', await column.count())
             const assertLog = await expect(column).toContainText('User Role')
-            console.log(assertLog)
             const rows = this.adminPageLocators.tableCardData();
-            console.log('Number of rows', await rows.allInnerTexts());
+            console.log('Number of rows', await rows.count());
             const assertUser = await expect(rows).toContainText('Admin')
-            console.log(assertUser)
+    }
+    }
+
+    public async getESS():Promise<any>{
+        let numberOfCards = await this.adminPageLocators.tableCardComplete().count()
+        for(let j=0;j<=numberOfCards;j++){
+            console.log(numberOfCards)
+        }
+        let numberOfCheckboxes: number
+        for(let i=1;i<=numberOfCheckboxes;i++){
+
+            const column = this.adminPageLocators.tableColumn();
+            console.log('Number of columns', await column.count())
+            const assertLog = await expect(column).toContainText('User Role')
+            const rows = this.adminPageLocators.tableCardData();
+            console.log('Number of rows', await rows.count());
+            const assertUser = await expect(rows).toContainText('ESS')
     }
     }
 

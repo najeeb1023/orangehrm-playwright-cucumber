@@ -8,4 +8,9 @@ Feature: User searches other users for Admin Role
     Scenario: User is able to search Admins
         And User navigates to Admin Tab
         When User is able to select role.
-        Then User is able to search by 1 Admin role
+        Then User is able to search by Admin role
+
+    Scenario: User is able to search ESS
+        And User navigates to Admin Tab
+        When User is able to select a ESS role.
+        Then User is able to search by ESS role
