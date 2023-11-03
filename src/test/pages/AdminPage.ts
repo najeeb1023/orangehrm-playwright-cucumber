@@ -52,8 +52,6 @@ export class AdminPage {
 
     public async getAdmins(numberOfCheckboxes: number):Promise<void>{
         for(let i=1;i<=numberOfCheckboxes;i++){
-            //const table = this.adminPageLocators.sysAdminTable();
-            // await expect (table).toContainText('Admin');
             const rows = this.adminPageLocators.tableCardData()
             console.log('Number of columns', await rows.allTextContents())
     }
