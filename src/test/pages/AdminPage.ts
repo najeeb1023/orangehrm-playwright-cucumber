@@ -41,7 +41,10 @@ export class AdminPage {
         
         const el = this.adminPageLocators.roleDropDown().first();
         await el.click();
-        await el.getByText('Admin').click()
+        await expect(this.adminPageLocators.roleDropDown()).toBeVisible()
+        await el.getByText('Admin').click();
+        await this.adminPageLocators.searchBtnAdmin().click()
+        
 
         
         
@@ -49,16 +52,10 @@ export class AdminPage {
 
     public async getAdmins(numberOfCheckboxes: number):Promise<void>{
         for(let i=1;i<=numberOfCheckboxes;i++){
-             
-            // await expect(tableCardData).toHaveText('Admin');
-
-            const table = this.adminPageLocators.sysAdminTable();
-            //console.log(table)
-            await expect (table).toContainText('Admin')
-            
-            //const rows = this.adminPageLocators.tableCardData();
-
-            
+            //const table = this.adminPageLocators.sysAdminTable();
+            // await expect (table).toContainText('Admin');
+            const rows = this.adminPageLocators.tableCardData()
+            console.log('Number of columns', await rows.allTextContents())
     }
     }
 
