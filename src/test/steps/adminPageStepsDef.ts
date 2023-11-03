@@ -21,7 +21,7 @@ When('User is able to select role.', async function () {
     await userDetails.enterUserDetails();
 })
 
-// Then('User is able to search by Admin role', async function (){
-//     let userDetails = new AdminPage(pageFixture.page);
-//     await userDetails.searchAdminUsers();
-// })
+Then('User is able to search by {int} Admin role', async function (numberOfCheckboxes: number){
+    let userDetails = new AdminPage(pageFixture.page);
+    await userDetails.getAdmins(numberOfCheckboxes)
+})

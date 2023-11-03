@@ -28,6 +28,14 @@
         {
             "elementName": "searchBtnAdmin",
             "selectorValue": "//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']"
-        }
+        },
+        {
+            "elementName": "systemUserTable",
+            "selectorValue": "//div[@class='oxd-table-body']"
+         },
+         {
+             "elementName": "tableCard",
+             "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-card']"
+         }
     ]
 }
