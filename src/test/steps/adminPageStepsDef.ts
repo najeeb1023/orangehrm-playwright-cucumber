@@ -33,5 +33,5 @@ Then('User is able to search by Admin role', async function (){
 
 Then('User is able to search by ESS role', async function (){
     let userDetails = new AdminPage(pageFixture.page);
-    await userDetails.getAdmins()
+    await userDetails.getESS()
 })
