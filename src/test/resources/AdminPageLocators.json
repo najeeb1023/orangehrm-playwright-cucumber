@@ -23,7 +23,7 @@
         },
         {
             "elementName": "roleDropDown",
-            "selectorValue": "//div[@class='oxd-select-wrapper']"
+            "selectorValue": "div:nth-child(2) > .oxd-input-group > div:nth-child(2) > .oxd-select-wrapper"
         },
         {
             "elementName": "searchBtnAdmin",
