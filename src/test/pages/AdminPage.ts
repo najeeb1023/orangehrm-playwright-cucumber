@@ -19,6 +19,8 @@ export class AdminPage {
         searchBtnAdmin:() => pageFixture.page.locator(getResource('searchBtnAdmin').selectorValue),
         sysAdminTable:() => pageFixture.page.locator(getResource('systemUserTable').selectorValue),
         tableCardData:() => pageFixture.page.locator(getResource('tableCard').selectorValue),
+        tableColumn:() => pageFixture.page.locator(getResource('tableColumn').selectorValue),
+        userAdminAssert:() => pageFixture.page.locator(getResource('userAdminAssert').selectorValue)
         
     }
 
@@ -50,10 +52,17 @@ export class AdminPage {
         
     }
 
-    public async getAdmins(numberOfCheckboxes: number):Promise<void>{
+    public async getAdmins(numberOfCheckboxes: number):Promise<any>{
         for(let i=1;i<=numberOfCheckboxes;i++){
-            const rows = this.adminPageLocators.tableCardData()
-            console.log('Number of columns', await rows.allInnerTexts())
+
+            const column = this.adminPageLocators.tableColumn();
+            console.log('Number of columns', await column.allInnerTexts())
+            const assertLog = await expect(column).toContainText('User Role')
+            console.log(assertLog)
+            const rows = this.adminPageLocators.tableCardData();
+            console.log('Number of rows', await rows.allInnerTexts());
+            const assertUser = await expect(rows).toContainText('Admin')
+            console.log(assertUser)
     }
     }
 

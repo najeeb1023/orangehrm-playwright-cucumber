@@ -36,6 +36,14 @@
          {
              "elementName": "tableCard",
              "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-card']"
+         },
+         {
+            "elementName": "tableColumn",
+            "selectorValue": "//div[@class='oxd-table-header-cell oxd-padding-cell oxd-table-th'][3]"
+         },
+         {
+            "elementName": "userAdminAssert",
+            "selectorValue": "//div[@class='oxd-table-cell oxd-padding-cell'][3]"
          }
     ]
 }
