@@ -16,7 +16,10 @@ export class AdminPage {
         buzzTab:() => pageFixture.page.locator(getResource('buzzTab').selectorValue),
         userField:() => pageFixture.page.locator(getResource('userField').selectorValue),
         roleDropDown:() => pageFixture.page.locator(getResource('roleDropDown').selectorValue),
-        searchBtnAdmin:() => pageFixture.page.locator(getResource('searchBtnAdmin').selectorValue)
+        searchBtnAdmin:() => pageFixture.page.locator(getResource('searchBtnAdmin').selectorValue),
+        sysAdminTable:() => pageFixture.page.locator(getResource('systemUserTable').selectorValue),
+        tableCardData:() => pageFixture.page.locator(getResource('tableCard').selectorValue),
+        
     }
 
 
@@ -44,13 +47,19 @@ export class AdminPage {
         
     }
 
-    public async searchAdminUsers():Promise<void>{
+    public async getAdmins(numberOfCheckboxes: number):Promise<void>{
+        for(let i=1;i<=numberOfCheckboxes;i++){
+             
+            // await expect(tableCardData).toHaveText('Admin');
 
-        const searchEl = this.adminPageLocators.searchBtnAdmin();
-        await searchEl.click();
-    
-        
-        
+            const table = this.adminPageLocators.sysAdminTable();
+            //console.log(table)
+            await expect (table).toContainText('Admin')
+            
+            //const rows = this.adminPageLocators.tableCardData();
+
+            
+    }
     }
 
 
