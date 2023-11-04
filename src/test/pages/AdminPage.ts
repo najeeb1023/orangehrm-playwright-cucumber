@@ -67,6 +67,8 @@ export class AdminPage {
          for(let i=1;i<=numberOfRows;i++){
             const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()))
             await expect(el).toContainText('ESS');
+            const text = await el.textContent();
+            console.log(text)
     }
     }
 
