@@ -12,6 +12,7 @@
             
         ],
         "dryRun": false,
+        "publishQuiet": true,
         "require": [
             "src/test/steps/*.ts",
             "src/test/hooks/hooks.ts"
