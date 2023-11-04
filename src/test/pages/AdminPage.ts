@@ -20,7 +20,7 @@ export class AdminPage {
         tableCardData:() => pageFixture.page.locator(getResource('tableCard').selectorValue),
         tableColumn:() => pageFixture.page.locator(getResource('tableColumn').selectorValue),
         userAdminAssert:() => pageFixture.page.locator(getResource('userAdminAssert').selectorValue),
-        tableCardComplete:() => pageFixture.page.locator(getResource('tableCardComplete').selectorValue)
+        tableCardComplete:() => pageFixture.page.locator(getResource('tableCardComplete').selectorValue),
         
     }
     constructor(public page: Page){
@@ -62,18 +62,11 @@ export class AdminPage {
     }
     }
     public async getESS():Promise<any>{
-        let numberOfCards = await this.adminPageLocators.tableCardComplete().count();
-        for(let j=0;j<=numberOfCards;j++){
-            console.log(numberOfCards);
-        }
-        let numberOfCheckboxes: number
-        for(let i=1;i<=numberOfCheckboxes;i++){
-            const column = this.adminPageLocators.tableColumn();
-            console.log('Number of columns', await column.count());
-            const assertLog = await expect(column).toContainText('User Role');
-            const rows = this.adminPageLocators.tableCardData();
-            console.log('Number of rows', await rows.count());
-            const assertUser = await expect(rows).toContainText('ESS');
+        let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
+        await expect(pageFixture.page.locator('//div[@class="oxd-table-header"][1]/div/div[3]')).toContainText('User Role');
+         for(let i=1;i<=numberOfRows;i++){
+            const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()))
+            await expect(el).toContainText('ESS');
     }
     }
 

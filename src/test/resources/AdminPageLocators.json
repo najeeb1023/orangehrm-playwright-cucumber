@@ -48,6 +48,10 @@
          {
             "elementName": "userAdminAssert",
             "selectorValue": "//div[@class='oxd-table-cell oxd-padding-cell']"
+         },
+         {
+            "elementName": "userRoleLocator",
+            "selectorValue": "//div[@class='oxd-table-card'][placeHolder]/div/div[3]"
          }
     ]
 }
