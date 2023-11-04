@@ -17,7 +17,17 @@ When('User goes to the website and enters {string} and {string}.', async functio
   await loginUserFunc.loginUser(username, password);
 });
 
+When('User goes to the website and enters wrong {string} and {string}.', async function (username: string, password: string) {
+  let loginUserFunc = new Login(pageFixture.page);
+  await loginUserFunc.doesNotLoginUser(username, password);
+});
+
 Then('The user is logged in.', async function () {
   let loginUserFunc = new Login(pageFixture.page);
   await loginUserFunc.assertUserLogin();
 });
+
+Then('The user is not logged in.', async function () {
+  let loginUserFunc = new Login(pageFixture.page);
+  await loginUserFunc.assertUserNotLoggedIn();
+})

@@ -12,6 +12,10 @@
         {
             "elementName": "adminTab",
             "selectorValue": "//div[@class='oxd-sidepanel-body']//li[1]"
+        },
+        {
+            "elementName": "invalidLoginMessage",
+            "selectorValue": "//div[@class='oxd-alert oxd-alert--error']//p[1]"
         }
     ]
 }
