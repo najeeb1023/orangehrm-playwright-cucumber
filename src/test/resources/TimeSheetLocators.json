@@ -1,0 +1,10 @@
+{
+    "name": "Time Sheet locators",
+    "webElements": [
+        {
+            "elementName": "timeSheetIcon",
+            "selectorValue": "//div[@class='oxd-grid-item oxd-grid-item--gutters orangehrm-quick-launch-card'][3]"
+        }
+
+    ]
+}

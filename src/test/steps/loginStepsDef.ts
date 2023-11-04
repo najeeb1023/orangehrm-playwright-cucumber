@@ -4,7 +4,7 @@ import { Login } from "../pages/LoginPage";
 import { AdminPage } from "../pages/AdminPage";
 import { pageFixture } from "../hooks/pageFixture";
 
-setDefaultTimeout(15000)
+setDefaultTimeout(15000);
 
 Given('the user lands at the webpage.', async function () {
   

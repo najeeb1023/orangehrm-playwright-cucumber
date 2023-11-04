@@ -1,6 +1,5 @@
 node_modules/
 /playwright-report/
 /playwright/.cache/
-/cucumber-report.html
 /videos
-/test-results/screenshots
+test-results/screenshots

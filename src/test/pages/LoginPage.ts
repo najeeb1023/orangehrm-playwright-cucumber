@@ -15,23 +15,16 @@ export class Login {
         getBody:() => pageFixture.page.locator("//li[@class='oxd-userdropdown']"),
         adminTab:() => pageFixture.page.locator(getResource('adminTab').selectorValue)
     }
-
     constructor(public page: Page){
         pageFixture.page = page;
     }
-
     public async loginUser(username: string, password: string):Promise<void> {
        await this.loginPageLocators.loginField().type(username);
        await this.loginPageLocators.passwordField().type(password);
        await this.loginPageLocators.loginBtn().click();
        
     }
-
     public async assertUserLogin():Promise<void> {
         await expect(this.loginPageLocators.getBody()).toBeAttached();
-        
     }
-
-
-
 }
