@@ -4,7 +4,7 @@ export const config:LaunchOptions = {
   
     timeout: 600000,
     slowMo: 300,
-    headless: false,
+    headless: true,
     env: {
         password: "admin123"
     }
