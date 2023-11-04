@@ -46,20 +46,18 @@ export class AdminPage {
         await this.adminPageLocators.searchBtnAdmin().click();
     }
     public async getAdmins():Promise<any>{
-        let numberOfCards = await this.adminPageLocators.tableCardComplete().count();
-        for(let j=0;j<=numberOfCards;j++){
-            console.log(numberOfCards);
-        }
-        let numberOfCheckboxes: number
-        for(let i=1;i<=numberOfCheckboxes;i++){
+        let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
+        await expect(pageFixture.page.locator('//div[@class="oxd-table-header"][1]/div/div[3]')).toContainText('User Role');
+        for(let i=1;i<=numberOfRows;i++){
+            const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()))
+            await expect(el).toContainText('Admin');
+            const text = await el.textContent();
+            const textOutput = [text];
+            console.log(textOutput);
+            
 
-            const column = this.adminPageLocators.tableColumn();
-            console.log('Number of columns', await column.count());
-            const assertLog = await expect(column).toContainText('User Role');
-            const rows = this.adminPageLocators.tableCardData();
-            console.log('Number of rows', await rows.count());
-            const assertUser = await expect(rows).toContainText('Admin');
-    }
+        }
+        
     }
     public async getESS():Promise<any>{
         let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
@@ -68,7 +66,9 @@ export class AdminPage {
             const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()))
             await expect(el).toContainText('ESS');
             const text = await el.textContent();
-            console.log(text)
+            const textOutput = [text];
+            console.log(textOutput);
+            
     }
     }
 
