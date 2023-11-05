@@ -1,0 +1,9 @@
+{
+    "name":"Info Page",
+    "webElements":[
+    {
+        "elementName": "infotab",
+        "selectorValue": "//span[normalize-space()='My Info']"
+    }
+    ]
+}

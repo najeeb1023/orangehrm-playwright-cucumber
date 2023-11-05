@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "orangeHrm": "cucumber-js test"
+    "orangeHrm": "cucumber-js test --tags=@addInfo"
   },
   "keywords": [],
   "author": "",
