@@ -1,5 +1,5 @@
 import { Page, expect } from "@playwright/test";
-import * as adminPageLocators from "../resources/AdminPageLocators.json"
+import * as adminPageLocators from "../resources/AdminPageLocators.json";
 import { PageElement } from "../resources/interfaces/iPageElement";
 import { pageFixture } from "../hooks/pageFixture";
 

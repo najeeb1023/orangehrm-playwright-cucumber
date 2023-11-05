@@ -4,6 +4,26 @@
         {
             "elementName": "timeSheetIcon",
             "selectorValue": "//div[@class='oxd-grid-item oxd-grid-item--gutters orangehrm-quick-launch-card'][3]"
+        },
+        {
+            "elementName": "employeeName",
+            "selectorValue": "//div[@class='oxd-autocomplete-wrapper']//input[1]"
+        },
+        {
+            "elementName": "viewEmployeeButton",
+            "selectorValue": "//div[@class='oxd-form-actions']//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']"
+        },
+        {
+            "elementName": "tableCardComplete",
+            "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-card']"
+        },
+        {
+            "elementName": "getTable",
+            "selectorValue": "//div[@class='oxd-table-header']/div/div[2]"
+        },
+        {
+            "elementName": "userTimePeriod",
+            "selectorValue": "//div[@class='oxd-table-card']/div[1]/div[2]"
         }
 
     ]
