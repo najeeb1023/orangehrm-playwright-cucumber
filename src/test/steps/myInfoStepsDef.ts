@@ -42,5 +42,22 @@ Then ('User insert a SIN number',async function () {
     
 })
 
+Then ('User insert a Military service',async function() {
+    let  mils = new InfoPage(pageFixture.page)
+    await mils.militarySer();
+    
+})
+Then('User click a smoke',async function() {
+   let smo = new InfoPage(pageFixture.page)
+   await smo.smokeS(); 
+    
+})
+
+Then('User click save btn',async function() {
+    let btn = new InfoPage(pageFixture.page)
+    await btn.ButtonS();
+    
+})
+
     
 

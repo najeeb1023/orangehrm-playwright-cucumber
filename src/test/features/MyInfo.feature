@@ -12,3 +12,6 @@ Scenario: User click on InfoTab
   Then User insert a driver liecence number
   Then User insert a SSN number
   Then User insert a SIN number
+  Then User insert a Military service 
+  Then User click a smoke 
+  Then User click save btn

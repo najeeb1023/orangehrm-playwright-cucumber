@@ -16,7 +16,10 @@ export class InfoPage{
         otherId:()=>pageFixture.page.locator(getResource('otherid').selectorValue),
         DriverLiecenceField:()=>pageFixture.page.locator(getResource('Driverlicencenumber').selectorValue),
         ssNumberField:()=>pageFixture.page.locator(getResource('ssn').selectorValue),
-        sinNumberField:()=>pageFixture.page.locator(getResource('sinnumber').selectorValue)
+        sinNumberField:()=>pageFixture.page.locator(getResource('sinnumber').selectorValue),
+        militaryField:()=>pageFixture.page.locator(getResource('militaryservice').selectorValue),
+        smokerField:()=>pageFixture.page.locator(getResource('smoker').selectorValue),
+        Btnsave:()=> pageFixture.page.locator(getResource('Save button').selectorValue),
         
     }
 
@@ -43,5 +46,14 @@ public async ssNumber() :Promise<void>{
 
 public async ssinNumber() : Promise<void>{
     await this.infoPageLocators.sinNumberField().type('567789');
-}    
+}  
+public async militarySer() : Promise<void>{
+    await this.infoPageLocators.militaryField().type('no');
+} 
+public async smokeS (): Promise<void>{
+    await this.infoPageLocators.smokerField().click();
+}
+public async ButtonS () : Promise<void>{
+    await this.infoPageLocators.Btnsave().click();
+}
 }
