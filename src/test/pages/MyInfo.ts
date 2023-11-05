@@ -12,7 +12,12 @@ export class InfoPage{
 
     infoPageLocators = {
         infoTab:() => pageFixture.page.locator(getResource('infotab').selectorValue),
-
+        nickTextfield:()=>pageFixture.page.locator(getResource('employeenickname').selectorValue),
+        otherId:()=>pageFixture.page.locator(getResource('otherid').selectorValue),
+        DriverLiecenceField:()=>pageFixture.page.locator(getResource('Driverlicencenumber').selectorValue),
+        ssNumberField:()=>pageFixture.page.locator(getResource('ssn').selectorValue),
+        sinNumberField:()=>pageFixture.page.locator(getResource('sinnumber').selectorValue)
+        
     }
 
 constructor(public page : Page){
@@ -21,5 +26,22 @@ constructor(public page : Page){
 public async goToInfo():Promise<void>{
     await this.infoPageLocators.infoTab().click();
 }
+public async nickName():Promise<void>{
+    await this.infoPageLocators.nickTextfield().type('john');
+}
 
+public async otherId():Promise<void>{
+    await this.infoPageLocators.otherId().type('45678');
+}
+public async driverLN():Promise<void>{
+    await this.infoPageLocators.DriverLiecenceField().type('789045');
+}
+
+public async ssNumber() :Promise<void>{
+    await this.infoPageLocators.ssNumberField().type('789344');
+}   
+
+public async ssinNumber() : Promise<void>{
+    await this.infoPageLocators.sinNumberField().type('567789');
+}    
 }

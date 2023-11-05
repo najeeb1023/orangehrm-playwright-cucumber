@@ -16,3 +16,31 @@ Then('User click the info tab',async function() {
     await infoPage.goToInfo();
     
 })
+
+Then('User type a nickname',async function () {
+    let nick = new InfoPage(pageFixture.page)
+    await nick.nickName();
+})
+
+Then('User type a other id',async function() {
+    let otherId = new InfoPage(pageFixture.page)
+    await otherId.otherId();
+    
+})
+Then('User insert a driver liecence number',async function() {
+    let DriverLNN = new InfoPage(pageFixture.page)
+    await DriverLNN.driverLN();
+})
+Then('User insert a SSN number',async function() {
+    let ssNu = new InfoPage(pageFixture.page)
+    await ssNu.ssNumber();
+    
+})
+Then ('User insert a SIN number',async function () {
+    let ssinNu = new InfoPage(pageFixture.page)
+    await ssinNu.ssinNumber();
+    
+})
+
+    
+
