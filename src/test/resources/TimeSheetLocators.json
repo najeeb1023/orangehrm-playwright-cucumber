@@ -23,7 +23,7 @@
         },
         {
             "elementName": "userTimePeriod",
-            "selectorValue": "//div[@class='oxd-table-card']/div[1]/div[2]"
+            "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-cell oxd-padding-cell'][2]"
         }
 
     ]
