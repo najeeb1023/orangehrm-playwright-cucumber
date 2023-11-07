@@ -30,9 +30,9 @@ export class TimeSheet{
      let numberOfRows = await this.timeSheetLocators.tableRows().count();
      await expect(this.timeSheetLocators.getTable()).toContainText('Timesheet Period');
      for(let i=1;i<=numberOfRows;i++){
-        let tablePrint = await expect(this.timeSheetLocators.userTimePeriod().textContent())
-        const tableOutput = [tablePrint]
-        console.log(tableOutput)
+        const tablePrint = await expect(this.timeSheetLocators.userTimePeriod().textContent());
+        const tableOutput = [tablePrint];
+        console.log(tableOutput);
         
      }
     }
