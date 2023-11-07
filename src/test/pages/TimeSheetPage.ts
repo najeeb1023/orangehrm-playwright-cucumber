@@ -27,10 +27,8 @@ export class TimeSheet{
     public async getEmployeeTimePeriod():Promise<any>{
      let numberOfRows = await pageFixture.page.locator(getResource('tableCardComplete').selectorValue)
      await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period')
-     for(let i=1;i<=await numberOfRows.count();i++){
-        let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
-        console.log(tablePrint);
-     }
+     let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
+     console.log(tablePrint);
     }
 
     constructor(public page: Page){
