@@ -1,0 +1,33 @@
+{
+    "name": "Claim Page Locators",
+    "webElements": [
+        {
+            "elementName": "statusDropDown",
+            "selectorValue": "//*[@id='app']/div[1]/div[2]/div[2]/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div/div[1]"
+        },
+        {
+            "elementName": "claimTab",
+            "selectorValue": "//div//ul//li[11]"
+        },
+        {
+            "elementName": "submittedButtonOption",
+            "selectorValue": "//div[@role='listbox']//span[text()='Submitted']"
+        },
+        {
+            "elementName": "numberOfRows",
+            "selectorValue": "//div[@class='oxd-table-card']"
+        },
+        {
+            "elementName": "tableColumnStatus",
+            "selectorValue": "//div[@class='oxd-table-header-cell oxd-padding-cell oxd-table-th'][7]"
+        },
+        {
+            "elementName": "assertUserStatus",
+            "selectorValue": "//div[@class='oxd-table-card'][placeHolder]//div[7]"
+        },
+        {
+            "elementName": "submitButton",
+            "selectorValue": "//button[@type='submit']"
+        }
+    ]
+}
