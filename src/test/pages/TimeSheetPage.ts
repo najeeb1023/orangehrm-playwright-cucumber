@@ -28,7 +28,8 @@ export class TimeSheet{
      let numberOfRows = await pageFixture.page.locator(getResource('tableCardComplete').selectorValue)
      await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period')
      let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
-     console.log(tablePrint);
+     const tableOutput = [tablePrint]
+     console.log(tableOutput);
     }
 
     constructor(public page: Page){
