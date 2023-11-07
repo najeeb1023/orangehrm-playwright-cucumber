@@ -17,8 +17,6 @@ export class TimeSheet{
         timeSheetIcon:() => pageFixture.page.locator(getResource('timeSheetIcon').selectorValue),
         employeeName:() => pageFixture.page.locator(getResource('employeeName').selectorValue),
         viewEmplyee:() => pageFixture.page.locator(getResource('viewEmployeeButton').selectorValue),
-        tableRows:() => pageFixture.page.locator(getResource('tableCardComplete').selectorValue),
-        getTable:() => pageFixture.page.locator(getResource('getTable').selectorValue),
         userTimePeriod:() => pageFixture.page.locator(getResource('userTimePeriod').selectorValue)
     }
 
@@ -26,15 +24,12 @@ export class TimeSheet{
         await this.timeSheetLocators.timeSheetIcon().click();
     }
 
-    public async searchEmployee():Promise<any>{
-     let numberOfRows = await this.timeSheetLocators.tableRows().count();
-     await expect(this.timeSheetLocators.getTable()).toContainText('Timesheet Period');
-     for(let i=1;i<=numberOfRows;i++){
-        const tablePrint = await expect(this.timeSheetLocators.userTimePeriod().textContent());
-        const tableOutput = [tablePrint];
-        console.log(tableOutput);
-        
-     }
+    public async getEmployeeTimePeriod():Promise<any>{
+     let numberOfRows = await pageFixture.page.locator(getResource('tableCardComplete').selectorValue)
+     await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period')
+     let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
+     const tableOutput = [tablePrint]
+     console.log(tableOutput);
     }
 
     constructor(public page: Page){
