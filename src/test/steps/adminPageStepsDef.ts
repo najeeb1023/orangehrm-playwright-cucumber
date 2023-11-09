@@ -35,3 +35,13 @@ Then('User is able to search by ESS role', async function (){
     let userDetails = new AdminPage(pageFixture.page);
     await userDetails.getESS();
 })
+
+When('User clicks on Job sub-tab', async function (){
+    let userDetails = new AdminPage(pageFixture.page);
+    await userDetails.subTabNavigation();
+})
+
+Then('All jobs are shown', async function (){
+    let userDetails = new AdminPage(pageFixture.page);
+    console.log('Work in progress.');
+})

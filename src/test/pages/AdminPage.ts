@@ -21,6 +21,7 @@ export class AdminPage {
         tableColumn:() => pageFixture.page.locator(getResource('tableColumn').selectorValue),
         userAdminAssert:() => pageFixture.page.locator(getResource('userAdminAssert').selectorValue),
         tableCardComplete:() => pageFixture.page.locator(getResource('tableCardComplete').selectorValue),
+        jobTab:() => pageFixture.page.locator(getResource('jobTab').selectorValue)
         
     }
     constructor(public page: Page){
@@ -70,6 +71,11 @@ export class AdminPage {
             console.log(textOutput);
             
     }
+
+    }
+
+    public async subTabNavigation():Promise<void>{
+        await this.adminPageLocators.jobTab().click();
     }
 
 }

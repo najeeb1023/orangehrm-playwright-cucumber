@@ -14,3 +14,8 @@ Feature: User searches other users for Admin Role
         And User navigates to Admin Tab
         When User is able to select a ESS role.
         Then User is able to search by ESS role
+
+     Scenario: User is able to search for Jobs
+        And User navigates to Admin Tab
+        When User clicks on Job sub-tab
+        Then All jobs are shown
