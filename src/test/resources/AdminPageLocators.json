@@ -52,6 +52,10 @@
          {
             "elementName": "userRoleLocator",
             "selectorValue": "//div[@class='oxd-table-card'][placeHolder]/div/div[3]"
+         },
+         {
+            "elementName": "jobTab",
+            "selectorValue": "//div[@class='oxd-topbar-body']//li[2]"
          }
     ]
 }
