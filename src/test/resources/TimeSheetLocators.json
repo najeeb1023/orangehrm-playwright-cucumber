@@ -24,6 +24,18 @@
         {
             "elementName": "userTimePeriod",
             "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-cell oxd-padding-cell'][2]"
+        },
+        {
+            "elementName": "usersDropDown",
+            "selectorValue": "//div[@class='oxd-input-group oxd-input-field-bottom-space']//div[@role='option'][placeHolder]"
+        },
+        {
+            "elementName": "getDropDownCount",
+            "selectorValue": "//div[@class='oxd-input-group oxd-input-field-bottom-space']//div[@role='option']"
+        },
+        {
+            "elementName": "assertUserHeader",
+            "selectorValue": "//h6[text()='Timesheet for hi aa']"
         }
 
     ]

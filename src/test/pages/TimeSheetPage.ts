@@ -11,24 +11,41 @@ function getResource(resourceName: string){
 
 export class TimeSheet{
     
+    el: string[];
     
 
     timeSheetLocators = {
         timeSheetIcon:() => pageFixture.page.locator(getResource('timeSheetIcon').selectorValue),
         employeeName:() => pageFixture.page.locator(getResource('employeeName').selectorValue),
         viewEmplyee:() => pageFixture.page.locator(getResource('viewEmployeeButton').selectorValue),
-        userTimePeriod:() => pageFixture.page.locator(getResource('userTimePeriod').selectorValue)
+        userTimePeriod:() => pageFixture.page.locator(getResource('userTimePeriod').selectorValue),
+        getUsersFromDropDown:() => pageFixture.page.locator(getResource('usersDropDown').selectorValue),
+        getCount:() => pageFixture.page.locator(getResource('getDropDownCount').selectorValue),
+        assertUserTime:() => pageFixture.page.locator(getResource('assertUserHeader').selectorValue)
     }
+   
 
     public async goToTimeSheetAndEnterUser():Promise<void>{
         await this.timeSheetLocators.timeSheetIcon().click();
     }
 
+    public async getUsers():Promise<void>{
+
+        await this.timeSheetLocators.employeeName().type('a')
+        const numberOfUsers = await this.timeSheetLocators.getCount().count();
+        await pageFixture.page.waitForTimeout(5000);
+        console.log(numberOfUsers);
+        for(let i=1;i<=numberOfUsers;i++){
+            const el = await pageFixture.page.locator(getResource('usersDropDown').selectorValue.replace('placeHolder', i.toString()));
+            await el.click();
+        }
+        await this.timeSheetLocators.viewEmplyee().click();
+    }
+
     public async getEmployeeTimePeriod():Promise<any>{
-     let numberOfRows = await pageFixture.page.locator(getResource('tableCardComplete').selectorValue)
      await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period')
      let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
-     const tableOutput = [tablePrint]
+     const tableOutput = [tablePrint];
      console.log(tableOutput);
     }
 
