@@ -22,7 +22,6 @@ export class AdminPage {
         userAdminAssert:() => pageFixture.page.locator(getResource('userAdminAssert').selectorValue),
         tableCardComplete:() => pageFixture.page.locator(getResource('tableCardComplete').selectorValue),
         jobTab:() => pageFixture.page.locator(getResource('jobTab').selectorValue)
-        
     }
     constructor(public page: Page){
         pageFixture.page = page;
