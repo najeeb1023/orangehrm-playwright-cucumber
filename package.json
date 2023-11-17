@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "orangeHrm": "cucumber-js test --format cucumber-console-formatter"
+    "orangeHrm": "cucumber-js test --format cucumber-console-formatter --tags=@SearchByJob"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cucumber/cucumber": "^9.0.1",
+    "@cucumber/cucumber": "^9.6.0",
     "@playwright/test": "^1.39.0",
     "ts-node": "^10.9.1"
   },

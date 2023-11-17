@@ -88,9 +88,7 @@ export class AdminPage {
             const text = await el.textContent();
             const textOutput = [text];
             process.stdout.write("|" + `${textOutput}` + "|");
-
         }
-        process.stdout.write("\n")
+        console.log('\n');
 }
-
 }
