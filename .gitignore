@@ -3,4 +3,3 @@ node_modules/
 /playwright/.cache/
 /videos
 test-results/screenshots/*.png
-.gitattributes
