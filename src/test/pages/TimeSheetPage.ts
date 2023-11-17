@@ -33,12 +33,10 @@ export class TimeSheet{
 
         await this.timeSheetLocators.employeeName().type('a')
         const numberOfUsers = await this.timeSheetLocators.getCount().count();
-        console.log("   • Number of employees found:" + numberOfUsers);
-        console.log("Number of users found:" + numberOfUsers);
+        console.log("Number of users found: " + numberOfUsers);
         await pageFixture.page.waitForTimeout(5000);
         for(let i=1;i<=numberOfUsers;i++){
             const el = await pageFixture.page.locator(getResource('usersDropDown').selectorValue.replace('placeHolder', i.toString()));
-            await el.click();
         }
         await this.timeSheetLocators.viewEmplyee().click();
     }
