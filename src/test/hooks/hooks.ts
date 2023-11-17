@@ -12,7 +12,7 @@ BeforeAll(async function (){
 })
 
 Before(async function(){
-    context = await browser.newContext({recordVideo: { dir: 'videos/'}});
+    context = await browser.newContext();
     const page = await context.newPage();
     pageFixture.page = page;
 })
