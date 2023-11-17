@@ -33,8 +33,8 @@ export class TimeSheet{
 
         await this.timeSheetLocators.employeeName().type('a')
         const numberOfUsers = await this.timeSheetLocators.getCount().count();
+        console.log("Number of users found:" + numberOfUsers);
         await pageFixture.page.waitForTimeout(5000);
-        console.log(numberOfUsers);
         for(let i=1;i<=numberOfUsers;i++){
             const el = await pageFixture.page.locator(getResource('usersDropDown').selectorValue.replace('placeHolder', i.toString()));
             await el.click();
@@ -46,7 +46,7 @@ export class TimeSheet{
      await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period')
      let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
      const tableOutput = [tablePrint];
-     console.log(tableOutput);
+     process.stdout.write(`${tableOutput}`) + '|';
     }
 
     constructor(public page: Page){
