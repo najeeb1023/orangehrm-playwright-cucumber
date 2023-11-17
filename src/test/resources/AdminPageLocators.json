@@ -56,6 +56,10 @@
          {
             "elementName": "jobTab",
             "selectorValue": "//div[@class='oxd-topbar-body']//li[2]"
+         },
+         {
+            "elementName": "selectFromJobTitleListOptions",
+            "selectorValue": "//ul[@class='oxd-dropdown-menu']//a[contains(., 'Job Titles')]"
          }
     ]
 }

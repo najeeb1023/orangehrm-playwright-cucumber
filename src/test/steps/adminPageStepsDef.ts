@@ -9,39 +9,39 @@ setDefaultTimeout(15000);
 
 Given ('The user lands at the webpage', async function () {
     //await pageFixture.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-})
+});
 
 Given('User navigates to Admin Tab', async function (){
     let loginUserFunc = new AdminPage(pageFixture.page);
     await loginUserFunc.goToAdminTab();
-})
+});
 
 When('User is able to select role.', async function () {
     let userDetails = new AdminPage(pageFixture.page);
     await userDetails.enterUserDetails();
-})
+});
 
 When('User is able to select a ESS role.', async function () {
     let userDetails = new AdminPage(pageFixture.page);
     await userDetails.enterUserDetailsEss();
-})
+});
 
 Then('User is able to search by Admin role', async function (){
     let userDetails = new AdminPage(pageFixture.page);
     await userDetails.getAdmins();
-})
+});
 
 Then('User is able to search by ESS role', async function (){
     let userDetails = new AdminPage(pageFixture.page);
     await userDetails.getESS();
-})
+});
 
 When('User clicks on Job sub-tab', async function (){
     let userDetails = new AdminPage(pageFixture.page);
     await userDetails.subTabNavigation();
-})
+});
 
 Then('All jobs are shown', async function (){
     let userDetails = new AdminPage(pageFixture.page);
-    console.log('Work in progress.');
-})
+    await userDetails.assertByJobTitle();
+});
