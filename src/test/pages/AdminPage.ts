@@ -47,30 +47,30 @@ export class AdminPage {
     }
     public async getAdmins():Promise<any>{
         let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
-        console.log("Number of ESS users found:" + numberOfRows);
+        console.log("   • Number of ESS users found:" + numberOfRows);
         await expect(pageFixture.page.locator('//div[@class="oxd-table-header"][1]/div/div[3]')).toContainText('User Role');
         for(let i=1;i<=numberOfRows;i++){
             const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()))
             await expect(el).toContainText('Admin');
             const text = await el.textContent();
             const textOutput = [text];
-            process.stdout.write(`${textOutput}`) + '|';
-            
-
+            process.stdout.write("    |" + `${textOutput}` + "|");
         }
+        console.log('\n');
         
     }
     public async getESS():Promise<any>{
         let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
-        console.log("Number of ESS users found:" + numberOfRows);
+        console.log("   • Number of ESS users found:" + numberOfRows);
         await expect(pageFixture.page.locator('//div[@class="oxd-table-header"][1]/div/div[3]')).toContainText('User Role');
          for(let i=1;i<=numberOfRows;i++){
             const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()));
             await expect(el).toContainText('ESS');
             const text = await el.textContent();
             const textOutput = [text];
-            process.stdout.write(`${textOutput}`) + '|';
+            process.stdout.write("    |" + `${textOutput}` + "|");
         }
+        console.log('\n');
     }
 
     public async subTabNavigation():Promise<void>{
