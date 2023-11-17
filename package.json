@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "orangeHrm": "cucumber-js test --format cucumber-console-formatter --tags=@SearchByJob"
+    "orangeHrm": "cucumber-js test --format cucumber-console-formatter"
   },
   "keywords": [],
   "author": "",
