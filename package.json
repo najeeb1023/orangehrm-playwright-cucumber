@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "orangeHrm": "cucumber-js test"
+    "orangeHrm": "cucumber-js test --format cucumber-console-formatter"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
     "@cucumber/cucumber": "^9.0.1",
     "@playwright/test": "^1.39.0",
     "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "cucumber-console-formatter": "^1.0.0"
   }
 }
