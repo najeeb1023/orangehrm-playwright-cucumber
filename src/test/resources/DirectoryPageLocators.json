@@ -1,0 +1,21 @@
+{
+    "name": "Directory Page Locators",
+    "webElements": [
+        {
+            "elementName": "directoryTab",
+            "selectorValue": "//span[contains(., 'Directory')]"
+        },
+        {
+            "elementName": "getJobList",
+            "selectorValue": "//div[@role='listbox']//span"
+        },
+        {
+            "elementName": "jobTitleDropDown",
+            "selectorValue": "//div[@class='oxd-select-text-input']"
+        },
+        {
+            "elementName": "assertUserJobTitle",
+            "selectorValue": "//div[@class='orangehrm-directory-card-body']//p[1]"
+        }
+    ]
+}
