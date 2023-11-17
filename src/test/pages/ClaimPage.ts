@@ -35,14 +35,14 @@ export class Claim {
 
     public async assertSubmittedUsers():Promise<any>{
        let numberOfRows = await this.claimPageLocators.submittedUsers().count();
-       console.log("  • Number of submitted users found:" + numberOfRows);
+       console.log("• Number of submitted users found: " + numberOfRows);
        await expect(pageFixture.page.locator(getResource('tableColumnStatus').selectorValue)).toContainText('Status');
        for(let i=1;i<=numberOfRows;i++){
         const el = pageFixture.page.locator(getResource('assertUserStatus').selectorValue.replace('placeHolder', i.toString()));
         await expect(el).toContainText('Submitted');
         const status = await el.textContent();
         const statusOutput = [status];
-        process.stdout.write("    |" + `${statusOutput}` + "|");
+        process.stdout.write("|" + `${statusOutput}` + "|");
        }
        console.log('\n');
     }
