@@ -2,9 +2,4 @@ node_modules/
 /playwright-report/
 /playwright/.cache/
 /videos
-<<<<<<< HEAD
 test-results/screenshots/*.png
-=======
-test-results/screenshots/*.png
-.gitattributes
->>>>>>> a4c94427b5ebdda6fcd6ad020e28c23f7ed77f86
