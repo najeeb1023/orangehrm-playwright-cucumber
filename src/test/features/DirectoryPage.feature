@@ -12,4 +12,4 @@ Feature: User searches other users Time Sheet
 
         Examples:
             | JOBTITLE |
-            | Ch |
+            | Account Assistant |

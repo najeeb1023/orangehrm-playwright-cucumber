@@ -16,6 +16,10 @@
         {
             "elementName": "assertUserJobTitle",
             "selectorValue": "//div[@class='orangehrm-directory-card-body']//p[1]"
+        },
+        {
+            "elementName": "searchBtn",
+            "selectorValue": "//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']"
         }
     ]
 }
