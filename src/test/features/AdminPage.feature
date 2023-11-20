@@ -1,4 +1,4 @@
-@UserRole
+@UserRole @Regression
 Feature: User searches other users for Admin Role
 
     Background: User logs in.

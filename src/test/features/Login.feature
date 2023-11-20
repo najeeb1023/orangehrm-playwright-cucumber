@@ -1,4 +1,4 @@
-@Login
+@Login @Regression
 Feature: User Login Test
 
     Background: User logs in.
