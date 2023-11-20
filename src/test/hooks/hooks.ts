@@ -1,5 +1,5 @@
 import { After, AfterAll, Before, BeforeAll, BeforeStep, AfterStep, Status } from "@cucumber/cucumber";
-import { Browser, chromium, Page, BrowserContext } from "@playwright/test";
+import { Browser, chromium, Page, BrowserContext, firefox, webkit } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
 import { config } from "../../../playwright.config";
 
@@ -26,5 +26,5 @@ After(async function ({ pickle, result }){
 });
 
 AfterAll(async function (){
-      await browser.close();
+     await browser.close();
 });

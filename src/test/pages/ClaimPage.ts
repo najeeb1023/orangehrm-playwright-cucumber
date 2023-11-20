@@ -10,8 +10,6 @@ function getResource(resourceName: string){
 
 export class Claim {
 
-    
-
     claimPageLocators = {
         statusDropDown:() => pageFixture.page.locator(getResource('statusDropDown').selectorValue),
         claimTabButton:() => pageFixture.page.locator(getResource('claimTab').selectorValue),

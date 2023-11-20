@@ -31,12 +31,13 @@ export class TimeSheet{
 
     public async getUsers():Promise<void>{
 
-        await this.timeSheetLocators.employeeName().type('a')
+        await this.timeSheetLocators.employeeName().type('Paul')
         const numberOfUsers = await this.timeSheetLocators.getCount().count();
         console.log("Number of users found: " + numberOfUsers);
-        await pageFixture.page.waitForTimeout(5000);
+        await pageFixture.page.waitForTimeout(3000);
         for(let i=1;i<=numberOfUsers;i++){
-            const el = await pageFixture.page.locator(getResource('usersDropDown').selectorValue.replace('placeHolder', i.toString()));
+            const el = pageFixture.page.locator(getResource('usersDropDown').selectorValue.replace('placeHolder', i.toString()));
+            await el.first().click();
         }
         await this.timeSheetLocators.viewEmplyee().click();
     }
