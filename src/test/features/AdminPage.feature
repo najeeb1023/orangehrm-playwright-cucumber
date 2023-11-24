@@ -18,7 +18,7 @@ Feature: User searches other users for Admin Role
         Then User is able to search by ESS role
         
     @SearchByJob
-     Scenario: User is able to search for Jobs
+    Scenario: User is able to search for Jobs
         And User navigates to Admin Tab
         When User clicks on Job sub-tab
         Then All jobs are shown

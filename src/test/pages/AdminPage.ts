@@ -51,11 +51,11 @@ export class AdminPage {
         console.log("• Number of Admin users found: " + numberOfRows);
         await expect(pageFixture.page.locator('//div[@class="oxd-table-header"][1]/div/div[3]')).toContainText('User Role');
         for(let i=1;i<=numberOfRows;i++){
-            const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()))
-            await expect(el).toContainText('Admin');
-            const text = await el.textContent();
-            const textOutput = [text];
-            process.stdout.write("|" + `${textOutput}` + "|");
+        const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()))
+        await expect(el).toContainText('Admin');
+        const text = await el.textContent();
+        const textOutput = [text];
+        process.stdout.write("|" + `${textOutput}` + "|");
         }
         console.log('\n');
     }
@@ -63,7 +63,7 @@ export class AdminPage {
         let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
         console.log("• Number of ESS users found: " + numberOfRows);
         await expect(pageFixture.page.locator('//div[@class="oxd-table-header"][1]/div/div[3]')).toContainText('User Role');
-         for(let i=1;i<=numberOfRows;i++){
+        for(let i=1;i<=numberOfRows;i++){
             const el = pageFixture.page.locator(getResource('userRoleLocator').selectorValue.replace("placeHolder",i.toString()));
             await expect(el).toContainText('ESS');
             const text = await el.textContent();
@@ -84,10 +84,10 @@ export class AdminPage {
         let numberOfJobs = await pageFixture.page.locator("//div[@class='oxd-table-body']//div[@class='oxd-table-card']").count();
         console.log("• Number of Job Titles found: " + numberOfJobs);
         for(let i=1;i<=numberOfJobs;i++){
-            const el = pageFixture.page.locator("//div[@class='oxd-table-card'][placeHolder]/div/div[2]".replace("placeHolder",i.toString()));
-            const text = await el.textContent();
-            const textOutput = [text];
-            process.stdout.write("|" + `${textOutput}` + "|");
+        const el = pageFixture.page.locator("//div[@class='oxd-table-card'][placeHolder]/div/div[2]".replace("placeHolder",i.toString()));
+        const text = await el.textContent();
+        const textOutput = [text];
+        process.stdout.write("|" + `${textOutput}` + "|");
         }
         console.log('\n');
 }

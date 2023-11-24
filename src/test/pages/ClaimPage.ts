@@ -5,7 +5,6 @@ import { PageElement } from "../resources/interfaces/iPageElement";
 
 function getResource(resourceName: string){
     return claimPageLocators.webElements.find((element: PageElement) => element.elementName == resourceName) as PageElement
-
 }
 
 export class Claim {
