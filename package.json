@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "orangehrm": "cucumber-js test --format cucumber-console-formatter --tags=@Regression"
+    "orangehrm": "cucumber-js test --format cucumber-console-formatter --tags=@SearchByEss"
   },
   "keywords": [],
   "author": "",
