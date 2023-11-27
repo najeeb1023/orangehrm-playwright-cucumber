@@ -19,4 +19,4 @@ Feature: User Login Test
 
         Examples:
         |   USERNAME      |   PASSWORD |
-        |   changeAdmin       |   admin124 |
+        |   123213       |   admin124 |
