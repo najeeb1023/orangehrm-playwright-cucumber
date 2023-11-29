@@ -19,4 +19,4 @@ Feature: User Login Test
 
         Examples:
         |   USERNAME      |   PASSWORD |
-        |   !@#!@       |   admin12###4 |
+        |   !@#!@a       |   admin12###4 |
