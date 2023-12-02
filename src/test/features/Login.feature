@@ -19,4 +19,4 @@ Feature: User Login Test
 
         Examples:
         |   USERNAME      |   PASSWORD |
-        |      wer    |   admssin12###4 |
+        |      we123r    |   admssin12###4 |
