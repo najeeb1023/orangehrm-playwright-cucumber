@@ -31,7 +31,7 @@ export class Login extends AdminPage {
     public async changeLanguage(changeLanguage: string):Promise<void> {
         await pageFixture.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/admin/localization');
         await this.loginPageLocators.languageSelection().click();
-        await pageFixture.page.keyboard.fill(changeLanguage);
+        await pageFixture.page.keyboard.type(changeLanguage);
         await pageFixture.page.keyboard.press('Escape');
         await this.loginPageLocators.submitSaveLang().click();
     }
