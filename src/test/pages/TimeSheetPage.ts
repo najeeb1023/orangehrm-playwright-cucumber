@@ -47,7 +47,7 @@ export class TimeSheet{
      let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
      const tableOutput = [tablePrint];
      process.stdout.write("    |" + `${tableOutput}` + "|");
-     console.log('\n');
+     
     }
 
     constructor(public page: Page){

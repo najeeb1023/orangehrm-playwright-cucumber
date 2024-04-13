@@ -43,7 +43,7 @@ export class Directory{
             const usersNameReturned = await pageFixture.page.locator("//p[@class='oxd-text oxd-text--p orangehrm-directory-card-header --break-words']").first().textContent();
             process.stdout.write("First user returned is: " + `${usersNameReturned}` + "|");
             process.stdout.write("\n" + "with job title -> " + `${printAllUsersFound}` + "  |");
-            console.log("\n")
+            
     }
     constructor(public page: Page){
         pageFixture.page = page;

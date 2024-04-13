@@ -57,7 +57,7 @@ export class AdminPage {
         const textOutput = [text];
         process.stdout.write("|" + `${textOutput}` + "|");
         }
-        console.log('\n');
+        
     }
     public async getESS():Promise<any>{
         let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
@@ -70,7 +70,6 @@ export class AdminPage {
             const textOutput = [text];
             process.stdout.write("|" + `${textOutput}` + "|");
         }
-        console.log('\n');
     }
 
     public async subTabNavigation():Promise<void>{
@@ -89,6 +88,5 @@ export class AdminPage {
         const textOutput = [text];
         process.stdout.write("|" + `${textOutput}` + "|");
         }
-        console.log('\n');
 }
 }

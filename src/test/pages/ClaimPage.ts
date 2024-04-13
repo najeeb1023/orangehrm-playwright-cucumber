@@ -41,7 +41,7 @@ export class Claim {
         const statusOutput = [status];
         process.stdout.write("|" + `${statusOutput}` + "|");
        }
-       console.log('\n');
+    
     }
 
     constructor(public page: Page){
