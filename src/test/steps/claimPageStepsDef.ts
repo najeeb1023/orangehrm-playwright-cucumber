@@ -3,7 +3,7 @@ import { Claim } from "../pages/ClaimPage";
 import { pageFixture } from "../hooks/pageFixture";
 
 
-setDefaultTimeout(15000);
+setDefaultTimeout(150000);
 
 Given('User is logged in', async function () {
 

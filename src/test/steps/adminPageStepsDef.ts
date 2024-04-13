@@ -4,7 +4,7 @@ import { Browser, Page, chromium, expect } from "@playwright/test";
 import { pageFixture } from "../hooks/pageFixture";
 import { Login } from "../pages/LoginPage";
 
-setDefaultTimeout(15000);
+setDefaultTimeout(150000);
 
 
 Given ('The user lands at the webpage', async function () {

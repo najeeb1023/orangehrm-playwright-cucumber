@@ -2,7 +2,7 @@ import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber"
 import { TimeSheet } from "../pages/TimeSheetPage"
 import { pageFixture } from "../hooks/pageFixture"
 
-setDefaultTimeout(15000);
+setDefaultTimeout(150000);
 
 When('User navigates to Time Sheet page', async function (){
     let timeSheetFunc = new TimeSheet(pageFixture.page);

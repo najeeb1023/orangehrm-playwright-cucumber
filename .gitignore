@@ -3,4 +3,4 @@ node_modules/
 /playwright/.cache/
 /videos
 test-result/screenshots/
-cucumber-report.html
+test-result/reports/cucumber-report.html

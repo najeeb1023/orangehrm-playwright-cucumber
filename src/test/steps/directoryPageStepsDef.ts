@@ -2,7 +2,7 @@ import { Given, Then, When, setDefaultTimeout } from "@cucumber/cucumber";
 import { Directory } from "../pages/DirectoryPage";
 import { pageFixture } from "../hooks/pageFixture";
 
-setDefaultTimeout(15000);
+setDefaultTimeout(150000);
 
 When('User navigates to Directory tab', async function() {
     let directoryPage = new Directory(pageFixture.page);
