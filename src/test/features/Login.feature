@@ -3,9 +3,10 @@ Feature: User Login Test
 
     Background: User logs in.
         Given the user lands at the webpage.
-        
+    
     Scenario: User is able to login with correct credentials.
         When User goes to the website and enters "<USERNAME>" and "<PASSWORD>".
+        When User changes the language to "<En>".
         Then The user is logged in.
 
 

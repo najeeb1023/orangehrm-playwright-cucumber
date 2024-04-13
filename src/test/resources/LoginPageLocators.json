@@ -16,6 +16,18 @@
         {
             "elementName": "invalidLoginMessage",
             "selectorValue": "//div[@class='oxd-alert oxd-alert--error']//p[1]"
+        },
+        {
+            "elementName": "languageSelection",
+            "selectorValue": "//div[contains(@class,'oxd-form-row')]//div[contains(.,'Language')]//div[contains(@class,'oxd-select-text--after')]"
+        },
+        {
+            "elementName": "selectLanguage",
+            "selectorValue": "//div[contains(@class,'oxd-form-row')]//div[contains(.,'Language')]//div[contains(@class,'oxd-select-text oxd-select-text--active')]"
+        },
+        {
+            "elementName": "submitSaveLang",
+            "selectorValue": "//button[contains(@type,'submit')]"
         }
     ]
 }

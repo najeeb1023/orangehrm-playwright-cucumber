@@ -15,6 +15,10 @@ When('User goes to the website and enters {string} and {string}.', async functio
   await loginUserFunc.loginUser(username, password);
 });
 
+When('User changes the language to {string}.', async function (languageChange: string) {
+  await loginUserFunc.changeLanguage(languageChange);
+});
+
 When('User goes to the website and enters wrong {string} and {string}.', async function (username: string, password: string) {
   await loginUserFunc.doesNotLoginUser(username, password);
 });
