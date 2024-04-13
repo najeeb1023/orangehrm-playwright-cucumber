@@ -3,7 +3,7 @@
     "webElements": [
         {
             "elementName": "adminTab",
-            "selectorValue": "//div[@class='oxd-sidepanel-body']//li[1]"
+            "selectorValue": "//div[contains(@class,'oxd-sidepanel')]//ul//li[1]"
         },
         {
             "elementName": "addBtn",
