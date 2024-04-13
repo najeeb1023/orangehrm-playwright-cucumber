@@ -4,6 +4,7 @@
     "elements": [
       {
         "description": "",
+<<<<<<< HEAD
         "id": "user-searches-other-users-for-admin-role;user-is-able-to-search-admins",
         "keyword": "Scenario",
         "line": 9,
@@ -352,6 +353,8 @@
     "elements": [
       {
         "description": "",
+=======
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
         "id": "user-searches-other-users-time-sheet;user-is-able-to-check-time-of-people.",
         "keyword": "Scenario",
         "line": 8,
@@ -362,7 +365,11 @@
             "hidden": true,
             "result": {
               "status": "passed",
+<<<<<<< HEAD
               "duration": 74887199
+=======
+              "duration": 142282499
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
             }
           },
           {
@@ -375,7 +382,11 @@
             },
             "result": {
               "status": "passed",
+<<<<<<< HEAD
               "duration": 1543205999
+=======
+              "duration": 1542777200
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
             }
           },
           {
@@ -388,6 +399,7 @@
             },
             "result": {
               "status": "passed",
+<<<<<<< HEAD
               "duration": 3017815600
             }
           },
@@ -402,11 +414,15 @@
             "result": {
               "status": "passed",
               "duration": 1013641299
+=======
+              "duration": 3752141999
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
+<<<<<<< HEAD
             "line": 10,
             "name": "User selects status as Submitted",
             "match": {
@@ -415,12 +431,37 @@
             "result": {
               "status": "passed",
               "duration": 1076470500
+=======
+            "line": 9,
+            "name": "User navigates to Time Sheet page",
+            "match": {
+              "location": "src\\test\\steps\\timesheetPageStepsDef.ts:7"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 15018305299,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (C:\\Automation\\orangehrm-playwright-cucumber\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User is able to sort users",
+            "match": {
+              "location": "src\\test\\steps\\timesheetPageStepsDef.ts:13"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 11,
+<<<<<<< HEAD
             "name": "All users will status Enbaled are returned",
             "match": {
               "location": "src\\test\\steps\\claimPageStepsDef.ts:22"
@@ -428,6 +469,15 @@
             "result": {
               "status": "passed",
               "duration": 24851399
+=======
+            "name": "Time is returned for users",
+            "match": {
+              "location": "src\\test\\steps\\timesheetPageStepsDef.ts:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
             }
           },
           {
@@ -435,6 +485,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
+<<<<<<< HEAD
               "duration": 95178500
             },
             "embeddings": [
@@ -443,11 +494,19 @@
                 "mime_type": "image/png"
               }
             ]
+=======
+              "duration": 866099
+            }
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
           }
         ],
         "tags": [
           {
+<<<<<<< HEAD
             "name": "@ClaimTab",
+=======
+            "name": "@TimeSheet",
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
             "line": 1
           },
           {
@@ -464,7 +523,11 @@
     "name": "User searches other users Time Sheet",
     "tags": [
       {
+<<<<<<< HEAD
         "name": "@ClaimTab",
+=======
+        "name": "@TimeSheet",
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
         "line": 1
       },
       {
@@ -472,6 +535,7 @@
         "line": 1
       }
     ],
+<<<<<<< HEAD
     "uri": "src\\test\\features\\ClaimPage.feature"
   },
   {
@@ -668,5 +732,8 @@
       }
     ],
     "uri": "src\\test\\features\\Login.feature"
+=======
+    "uri": "src\\test\\features\\CheckTimeSheet.feature"
+>>>>>>> 4ae712be8987690e5290cb728a60c239dfbd8eda
   }
 ]
