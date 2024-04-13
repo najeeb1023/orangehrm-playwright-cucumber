@@ -21,8 +21,8 @@ export class Login extends AdminPage {
     }
 
     public async loginUser(username: string, password: string):Promise<void> {
-       await this.loginPageLocators.loginField().type(username);
-       await this.loginPageLocators.passwordField().type(password);
+       await this.loginPageLocators.loginField().fill(username);
+       await this.loginPageLocators.passwordField().fill(password);
        await this.loginPageLocators.loginBtn().click();
        await this.adminPageLocators.adminTab().click();
        
@@ -31,14 +31,14 @@ export class Login extends AdminPage {
     public async changeLanguage(changeLanguage: string):Promise<void> {
         await pageFixture.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/admin/localization');
         await this.loginPageLocators.languageSelection().click();
-        await pageFixture.page.keyboard.type(changeLanguage);
+        await pageFixture.page.keyboard.fill(changeLanguage);
         await pageFixture.page.keyboard.press('Escape');
         await this.loginPageLocators.submitSaveLang().click();
     }
 
     public async doesNotLoginUser(username: string, password: string):Promise<void> {
-        await this.loginPageLocators.loginField().type(username);
-        await this.loginPageLocators.passwordField().type(password);
+        await this.loginPageLocators.loginField().fill(username);
+        await this.loginPageLocators.passwordField().fill(password);
         await this.loginPageLocators.loginBtn().click();
      }
 
