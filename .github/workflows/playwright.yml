@@ -17,8 +17,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Cucumber-Tests
-      run: npm run orangehrm
+    - name: Cucumber-Login-Tests
+      run: npm run orangehrm:login
     - uses: actions/upload-artifact@v3
       if: always()
       with:
