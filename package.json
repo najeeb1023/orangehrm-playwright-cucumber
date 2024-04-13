@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "orangehrm": "cucumber-js --config=config/cucumber.js --tags @Regression"
+    "orangehrm": "cucumber-js --config=config/cucumber.js --tags @Login"
   },
   "keywords": [],
   "author": "",
