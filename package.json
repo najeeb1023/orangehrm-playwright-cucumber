@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cucumber/cucumber": "^9.6.0",
+    "@cucumber/cucumber": "^10.0.0",
     "@cucumber/pretty-formatter": "^1.0.1",
     "@playwright/test": "^1.39.0",
     "semantic-release": "^23.0.8",
