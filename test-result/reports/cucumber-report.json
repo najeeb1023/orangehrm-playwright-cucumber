@@ -1,0 +1,124 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-searches-other-users-time-sheet;user-is-able-to-check-time-of-people.",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "User is able to check time of people.",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 142282499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the user lands at the webpage.",
+            "match": {
+              "location": "src\\test\\steps\\loginStepsDef.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1542777200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User goes to the website and enters \"Admin\" and \"admin123\".",
+            "match": {
+              "location": "src\\test\\steps\\loginStepsDef.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3752141999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "User navigates to Time Sheet page",
+            "match": {
+              "location": "src\\test\\steps\\timesheetPageStepsDef.ts:7"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 15018305299,
+              "error_message": "Error: function timed out, ensure the promise resolves within 15000 milliseconds\n    at Timeout.<anonymous> (C:\\Automation\\orangehrm-playwright-cucumber\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "User is able to sort users",
+            "match": {
+              "location": "src\\test\\steps\\timesheetPageStepsDef.ts:13"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Time is returned for users",
+            "match": {
+              "location": "src\\test\\steps\\timesheetPageStepsDef.ts:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 866099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TimeSheet",
+            "line": 1
+          },
+          {
+            "name": "@Regression",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-searches-other-users-time-sheet",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "User searches other users Time Sheet",
+    "tags": [
+      {
+        "name": "@TimeSheet",
+        "line": 1
+      },
+      {
+        "name": "@Regression",
+        "line": 1
+      }
+    ],
+    "uri": "src\\test\\features\\CheckTimeSheet.feature"
+  }
+]
