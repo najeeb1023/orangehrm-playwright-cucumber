@@ -1,4 +1,4 @@
-@ToBeFixed
+@TimeSheet @Regression
 Feature: User searches other users Time Sheet
 
     Background: User logs in.
