@@ -46,7 +46,7 @@ export class TimeSheet{
      await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period')
      let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
      const tableOutput = [tablePrint];
-     process.stdout.write("    |" + `${tableOutput}` + "|");
+     process.stdout.write(("    ") + `${tableOutput}` + ("\n"));
      
     }
 
