@@ -31,7 +31,7 @@ export class TimeSheet{
 
     public async getUsers():Promise<void>{
 
-        await this.timeSheetLocators.employeeName().type('Paul')
+        await this.timeSheetLocators.employeeName().type('Orange Test')
         const numberOfUsers = await this.timeSheetLocators.getCount().count();
         console.log("Number of users found: " + numberOfUsers);
         await pageFixture.page.waitForTimeout(3000);
