@@ -22,8 +22,16 @@
             "selectorValue": "//div[@class='oxd-table-header']/div/div[2]"
         },
         {
+            "elementName": "getUsersTable",
+            "selectorValue": "//div[@class='oxd-table-header']/div/div[1]"
+        },
+        {
             "elementName": "userTimePeriod",
             "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-cell oxd-padding-cell'][2]"
+        },
+        {
+            "elementName": "userName",
+            "selectorValue": "//div[@class='oxd-table-body']//div[@class='oxd-table-cell oxd-padding-cell'][1]"
         },
         {
             "elementName": "usersDropDown",

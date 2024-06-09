@@ -12,6 +12,7 @@ When('User navigates to Time Sheet page', async function (){
 
 Given('User is able to sort users', async function (){
     let timeSheetFunc = new TimeSheet(pageFixture.page);
+    await timeSheetFunc.getUsersTable();
     await timeSheetFunc.getEmployeeTimePeriod();
 });
 
