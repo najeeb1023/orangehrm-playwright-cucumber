@@ -1,4 +1,4 @@
-@DirectoryTab
+@DirectoryTab @Regression
 Feature: User goes to Directory Page
 
     Background: User logs in.
