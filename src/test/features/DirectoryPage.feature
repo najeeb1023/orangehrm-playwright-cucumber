@@ -1,5 +1,5 @@
 @DirectoryTab
-Feature: User searches other users Time Sheet
+Feature: User goes to Directory Page
 
     Background: User logs in.
         Given the user lands at the webpage.

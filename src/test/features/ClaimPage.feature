@@ -1,5 +1,5 @@
 @ClaimTab @Regression
-Feature: User searches other users Time Sheet
+Feature: User goes to Claim Page
 
     Background: User logs in.
         Given the user lands at the webpage.

@@ -1,7 +1,6 @@
 import { Page, expect } from "@playwright/test";
 import { pageFixture } from "../hooks/pageFixture";
 import * as timeSheetLocators from "../resources/TimeSheetLocators.json";
-import * as adminPageLocators from "../resources/AdminPageLocators.json";
 
 import { PageElement } from "../resources/interfaces/iPageElement"
 
@@ -43,11 +42,18 @@ export class TimeSheet{
     }
 
     public async getEmployeeTimePeriod():Promise<any>{
-     await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period')
+     await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period');
      let tablePrint = await pageFixture.page.locator(getResource('userTimePeriod').selectorValue).allTextContents();
      const tableOutput = [tablePrint];
      process.stdout.write(("    ") + `${tableOutput}` + ("\n"));
      
+    }
+
+    public async getUsersTable():Promise<any>{
+        await expect(pageFixture.page.locator(getResource('getUsersTable').selectorValue)).toContainText('Employee Name');
+        let userPrint = await pageFixture.page.locator(getResource('userName').selectorValue).allInnerTexts();
+        const userTable = [userPrint];
+        process.stdout.write(("    ") + `${userTable}\n` + ("\n"));
     }
 
     constructor(public page: Page){
