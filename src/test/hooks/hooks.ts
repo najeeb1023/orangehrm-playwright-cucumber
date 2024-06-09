@@ -9,10 +9,11 @@ let context: BrowserContext;
 
 BeforeAll(async function (){
     browser = await chromium.launch(config);
+    
 });
 
 Before(async function(){
-    context = await browser.newContext();
+    context = await browser.newContext({viewport: null});
     const page = await context.newPage();
     pageFixture.page = page;
 });

@@ -6,7 +6,7 @@
   "scripts": {
     "orangehrm:login": "cucumber-js --config=config/cucumber.js --tags @Login && npm run orangehrm:regression",
     "orangehrm:regression": "cucumber-js --config=config/cucumber.js --tags @Regression",
-    "orangehrm:debug": "cucumber-js --config=config/cucumber.js --tags @TimeSheet"
+    "orangehrm:debug": "cucumber-js --config=config/cucumber.js --tags @debug"
   },
   "keywords": [],
   "author": "",
