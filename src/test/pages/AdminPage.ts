@@ -38,6 +38,7 @@ export class AdminPage {
         await el.getByText('Admin').click();
         await pageFixture.page.waitForTimeout(3000);
         await this.adminPageLocators.searchBtnAdmin().click();
+        await pageFixture.page.waitForTimeout(3000);
     
     }
     public async enterUserDetailsEss():Promise<void>{
@@ -47,6 +48,7 @@ export class AdminPage {
         await el.getByText('ESS').click();
         await pageFixture.page.waitForTimeout(3000);
         await this.adminPageLocators.searchBtnAdmin().click();
+        await pageFixture.page.waitForTimeout(3000);
     }
     public async getAdmins():Promise<any>{
         let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
