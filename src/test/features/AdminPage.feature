@@ -4,7 +4,6 @@ Feature: User searches other users for Admin Role
     Background: User logs in.
         Given the user lands at the webpage.
         When User goes to the website and enters "Admin" and "admin123".
-        When User changes the language to "<En>".
         Then The user is logged in.
     
     @SearchByAdmin
