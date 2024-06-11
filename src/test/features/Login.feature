@@ -1,5 +1,5 @@
 @Login @Regression
-Feature: User Login Test
+Feature: User logins in with correct and incorrect credentials
 
     Background: User logs in.
         Given the user lands at the webpage.
