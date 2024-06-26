@@ -1,4 +1,4 @@
-[![Playwright Tests](https://github.com/najeeb1023/orangehrm-playwright-cucumber/actions/workflows/playwright.yml/badge.svg?branch=master)](https://github.com/najeeb1023/orangehrm-playwright-cucumber/actions/workflows/playwright.yml)
+[![Playwright Tests](https://github.com/najeeb1023/orangehrm-playwright-cucumber/actions/workflows/playwright.yml/badge.svg?branch=master)](https://github.com/najeeb1023/orangehrm-playwright-cucumber/actions/workflows/playwright.yaml)
 
 ## To run the project
 
