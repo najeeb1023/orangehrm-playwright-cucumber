@@ -1,4 +1,4 @@
-@ClaimTab @Regression
+@ClaimTab
 Feature: User goes to Claim Page
 
     Background: User logs in.
