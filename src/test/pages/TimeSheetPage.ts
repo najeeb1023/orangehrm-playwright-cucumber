@@ -21,12 +21,12 @@ export class TimeSheet{
         getUsersFromDropDown:() => pageFixture.page.locator(getResource('usersDropDown').selectorValue),
         getCount:() => pageFixture.page.locator(getResource('getDropDownCount').selectorValue),
         assertUserTime:() => pageFixture.page.locator(getResource('assertUserHeader').selectorValue)
-    }
+    };
    
 
     public async goToTimeSheetAndEnterUser():Promise<void>{
         await this.timeSheetLocators.timeSheetIcon().click();
-    }
+    };
 
     public async getUsers():Promise<void>{
 
@@ -37,9 +37,9 @@ export class TimeSheet{
         for(let i=1;i<=numberOfUsers;i++){
             const el = pageFixture.page.locator(getResource('usersDropDown').selectorValue.replace('placeHolder', i.toString()));
             await el.first().click();
-        }
+        };
         await this.timeSheetLocators.viewEmplyee().click();
-    }
+    };
 
     public async getEmployeeTimePeriod():Promise<any>{
      await expect(pageFixture.page.locator(getResource('getTable').selectorValue)).toContainText('Timesheet Period');
@@ -47,17 +47,16 @@ export class TimeSheet{
      const tableOutput = [tablePrint];
      process.stdout.write(("    ") + `${tableOutput}` + ("\n"));
      
-    }
+    };
 
     public async getUsersTable():Promise<any>{
         await expect(pageFixture.page.locator(getResource('getUsersTable').selectorValue)).toContainText('Employee Name');
         let userPrint = await pageFixture.page.locator(getResource('userName').selectorValue).allInnerTexts();
         const userTable = [userPrint];
         process.stdout.write(("    ") + `${userTable}\n` + ("\n"));
-    }
+    };
 
     constructor(public page: Page){
         pageFixture.page = page;
-    }
-
-}
+    };
+};

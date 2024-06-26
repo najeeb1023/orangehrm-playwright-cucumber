@@ -9,4 +9,4 @@ RUN npm install
 RUN npx @playwright/test install
 
 RUN npx playwright install-deps
-RUN npm run orangehrm:login
+RUN npm run orangehrm

@@ -18,7 +18,7 @@ jobs:
     - name: Install Playwright Chromium
       run: npx playwright install chromium
     - name: Cucumber-Login-Tests
-      run: npm run orangehrm:login
+      run: npm run orangehrm
     - uses: actions/upload-artifact@v3
       if: always()
       with:

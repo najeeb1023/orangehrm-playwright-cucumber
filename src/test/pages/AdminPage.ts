@@ -5,7 +5,7 @@ import { pageFixture } from "../hooks/pageFixture";
 
 function getResource(resourceName: string) {
     return adminPageLocators.webElements.find((element: PageElement) => element.elementName == resourceName) as PageElement
- }
+ };
 export class AdminPage {
 
     adminPageLocators = {
@@ -23,14 +23,17 @@ export class AdminPage {
         tableCardComplete:() => pageFixture.page.locator(getResource('tableCardComplete').selectorValue),
         jobTab:() => pageFixture.page.locator(getResource('jobTab').selectorValue),
         selectFromJobTitleListOptions:() => pageFixture.page.locator(getResource('selectFromJobTitleListOptions').selectorValue)
-    }
+    };
+
     constructor(public page: Page){
         pageFixture.page = page;
-    }
+    };
+
     public async goToAdminTab():Promise<void>{
     
         await this.adminPageLocators.adminTab().click(); 
-    }
+    };
+
     public async enterUserDetails():Promise<void>{
         const el = this.adminPageLocators.roleDropDown().first();
         await el.click();
@@ -40,7 +43,8 @@ export class AdminPage {
         await this.adminPageLocators.searchBtnAdmin().click();
         await pageFixture.page.waitForTimeout(3000);
     
-    }
+    };
+
     public async enterUserDetailsEss():Promise<void>{
         const el = this.adminPageLocators.roleDropDown().first();
         await el.click();
@@ -49,7 +53,8 @@ export class AdminPage {
         await pageFixture.page.waitForTimeout(3000);
         await this.adminPageLocators.searchBtnAdmin().click();
         await pageFixture.page.waitForTimeout(3000);
-    }
+    };
+
     public async getAdmins():Promise<any>{
         let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
         console.log(("    ")+"• Number of Admin users found: " + numberOfRows);
@@ -60,9 +65,9 @@ export class AdminPage {
         const text = await el.textContent();
         const textOutput = [text];
         console.log(("    ") + `${textOutput}`);
-        }
-        
-    }
+        };
+    };
+
     public async getESS():Promise<any>{
         let numberOfRows = await this.adminPageLocators.tableCardComplete().count();
         console.log(("    ")+"• Number of ESS users found: " + numberOfRows);
@@ -73,15 +78,15 @@ export class AdminPage {
             const text = await el.textContent();
             const textOutput = [text];
             process.stdout.write(("    ") + `${textOutput}` + ("\n"));
-        }
-    }
+        };
+    };
 
     public async subTabNavigation():Promise<void>{
         await this.adminPageLocators.jobTab().click();
         await this.adminPageLocators.selectFromJobTitleListOptions().click();
         await pageFixture.page.waitForTimeout(1500);
 
-    }
+    };
 
     public async assertByJobTitle():Promise<any>{
         let numberOfJobs = await pageFixture.page.locator("//div[@class='oxd-table-body']//div[@class='oxd-table-card']").count();
@@ -91,6 +96,6 @@ export class AdminPage {
         const text = await el.textContent();
         const textOutput = [text];
         process.stdout.write(("    ")+ `${textOutput}` + ("\n"));
-        }
-}
-}
+        };
+    };
+};
