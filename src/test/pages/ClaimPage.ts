@@ -5,7 +5,7 @@ import { PageElement } from "../resources/interfaces/iPageElement";
 
 function getResource(resourceName: string){
     return claimPageLocators.webElements.find((element: PageElement) => element.elementName == resourceName) as PageElement
-}
+};
 
 export class Claim {
 
@@ -18,17 +18,17 @@ export class Claim {
         submitButton:() => pageFixture.page.locator(getResource('submitButton').selectorValue),
         assertUserStatus:() => pageFixture.page.locator(getResource('assertUserStatus').selectorValue)
 
-    }
+    };
 
     public async goToClaimTab():Promise<void>{
         await this.claimPageLocators.claimTabButton().click();
-    }
+    };
 
     public async selectStatus():Promise<void>{
        await this.claimPageLocators.statusDropDown().click();
        await this.claimPageLocators.submittedOption().click();
        await this.claimPageLocators.submitButton().click();
-    }
+    };
 
     public async assertSubmittedUsers():Promise<any>{
        let numberOfRows = await this.claimPageLocators.submittedUsers().count();
@@ -40,15 +40,9 @@ export class Claim {
         const status = await el.textContent();
         const statusOutput = [status];
         process.stdout.write("|" + `${statusOutput}` + "|");
-       }
-    
-    }
-
+       };
+    };
     constructor(public page: Page){
         pageFixture.page = page;
-    }
-    
-
-
-
+    };
 }

@@ -6,7 +6,7 @@ import { AdminPage } from "./AdminPage";
 
  function getResource(resourceName: string) {
     return loginPageResources.webElements.find((element: PageElement) => element.elementName == resourceName) as PageElement
- }
+ };
 export class Login extends AdminPage {
 
     loginPageLocators = {
@@ -18,7 +18,7 @@ export class Login extends AdminPage {
         invalidLoginMessage:() => pageFixture.page.locator(getResource('invalidLoginMessage').selectorValue),
         languageSelection:() => pageFixture.page.locator(getResource('languageSelection').selectorValue),
         submitSaveLang:() => pageFixture.page.locator(getResource('submitSaveLang').selectorValue)
-    }
+    };
 
     public async loginUser(username: string, password: string):Promise<void> {
        await this.loginPageLocators.loginField().fill(username);
@@ -26,7 +26,7 @@ export class Login extends AdminPage {
        await this.loginPageLocators.loginBtn().click();
        await this.adminPageLocators.adminTab().click();
        
-    }
+    };
 
     public async changeLanguage(changeLanguage: string):Promise<void> {
         await pageFixture.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/admin/localization');
@@ -34,19 +34,19 @@ export class Login extends AdminPage {
         await pageFixture.page.keyboard.type(changeLanguage);
         await pageFixture.page.keyboard.press('Escape');
         await this.loginPageLocators.submitSaveLang().click();
-    }
+    };
 
     public async doesNotLoginUser(username: string, password: string):Promise<void> {
         await this.loginPageLocators.loginField().fill(username);
         await this.loginPageLocators.passwordField().fill(password);
         await this.loginPageLocators.loginBtn().click();
-     }
+     };
 
      public async assertUserNotLoggedIn():Promise<void>{
         await expect(this.loginPageLocators.invalidLoginMessage()).toHaveText('Invalid credentials');
-     }
+     };
 
     public async assertUserLogin():Promise<void> {
         await expect(this.loginPageLocators.getBody()).toBeVisible();
-    }
-}
+    };
+};
