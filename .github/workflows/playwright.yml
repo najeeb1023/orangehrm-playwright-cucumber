@@ -15,7 +15,7 @@ jobs:
         node-version: 20
     - name: Install dependencies
       run: npm ci
-    - name: Install Playwright Browsers
+    - name: npx playwright install chromium
       run: npx playwright install --with-deps
     - name: Cucumber-Login-Tests
       run: npm run orangehrm:login
